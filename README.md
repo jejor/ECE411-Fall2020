@@ -36,6 +36,12 @@ This project can be adapted for a system with up to 9 inputs to display the powe
 - This is your proposed design, from a high level.
 - Create a Level 1 block diagram: one block per major section (e.g., processor, input, output,power supply, etc) with interconnections in between them. Label all interconnections. Label all blocks. If it makes sense to put the part number in the block, go ahead.
 
+#### The full system architecture for the Test Stand Automation & Regualation system with the Safety Bar sub-project (green circle):
+![TSAR System Architecture Practicum](https://github.com/jejor/ECE411-Fall2020/blob/main/Images/TSAR%20System%20Architecture-Practicum.jpg?raw=true)
+
+#### Safety Bar Level 1 Block Diagram:
+![Level 1 Block Diagram](https://github.com/jejor/ECE411-Fall2020/blob/main/Images/TSARsafeteybarLVL1.png?raw=true)
+
 ## Design Specification
 - OK, now put in the technical details on the design.
 - A list of bullet points is fine here: What is the sensor? Processor? Actuator? Power? Mechanical design? Firmware? Arduino or no? Development environment
