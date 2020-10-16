@@ -19,6 +19,11 @@ This project can be adapted for a system with up to 9 inputs to display the powe
 - Remember, you're defining the requirements, not the solution.
 - Feel free to use either "must" or "must, should, may"
 
+.
+
+.
+
+.
 
 - Must be visible from 300 feet (91.5 meters).
 - Must be able to take at least 9 power line (valve) inputs.
