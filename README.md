@@ -1,5 +1,6 @@
 # ECE411-Fall2020
 Practicum Project: Safety Bar
+Tiffani Shilts Hartman <tshilts2@pdx.edu>, Jennifer Jordan <jejor2@pdx.edu>, Katie Loseke <kloseke@pdx.edu>, Seth Rohrbach <rseth@pdx.edu>
 
 
 ## Executive Summary / Concept of Operations
