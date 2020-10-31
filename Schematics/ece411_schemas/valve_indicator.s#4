@@ -1175,6 +1175,10 @@ Created by Upverter.com</description>
 <wire x1="-1.975" y1="2.475" x2="1.975" y2="2.475" width="0.15" layer="51"/>
 <wire x1="1.975" y1="2.475" x2="1.975" y2="-2.475" width="0.15" layer="51"/>
 <wire x1="1.975" y1="-2.475" x2="-1.975" y2="-2.475" width="0.15" layer="51"/>
+<wire x1="-3.35" y1="-2.575" x2="-3.35" y2="2.575" width="0.1" layer="41"/>
+<wire x1="-3.35" y1="2.575" x2="3.35" y2="2.575" width="0.1" layer="41"/>
+<wire x1="3.35" y1="2.575" x2="3.35" y2="-2.575" width="0.1" layer="41"/>
+<wire x1="3.35" y1="-2.575" x2="-3.35" y2="-2.575" width="0.1" layer="41"/>
 <wire x1="-1.37" y1="2.475" x2="1.37" y2="2.475" width="0.15" layer="21"/>
 <wire x1="-1.37" y1="-2.475" x2="1.37" y2="-2.475" width="0.15" layer="21"/>
 <text x="-1.975" y="2.775" size="1" layer="25">&gt;NAME</text>
@@ -11668,7 +11672,7 @@ May need to add more pins to collect data!</text>
 <sheet>
 <description>Power Regulators</description>
 <plain>
-<text x="55.88" y="200.66" size="1.778" layer="97">POE Connector 
+<text x="71.12" y="218.44" size="1.778" layer="97">POE Connector 
 24V, Up to 30W 
 Connector type could change</text>
 <text x="132.08" y="231.14" size="1.778" layer="97">Not 100% sure what R_SC is, 
@@ -11690,7 +11694,7 @@ by the datasheet</text>
 POE+ 24V to 3.7V</text>
 <text x="292.1" y="218.44" size="1.778" layer="97">3V7 powers all Hall Effect Sensors (HES#)</text>
 <text x="50.8" y="231.14" size="1.778" layer="97">POE+ Power Supply to 3.7 Hall Effect Sensor Power</text>
-<text x="78.74" y="109.22" size="1.778" layer="97">POE Connector 
+<text x="71.12" y="119.38" size="1.778" layer="97">POE Connector 
 24V, Up to 30W 
 Connector type could change</text>
 <text x="132.08" y="132.08" size="1.778" layer="97">Not 100% sure what R_SC is, 
@@ -11726,8 +11730,8 @@ POE+ 24V to 10V</text>
 <instance part="U1" gate="G$0" x="152.4" y="220.98" smashed="yes">
 <attribute name="NAME" x="154.94" y="218.44" size="2.54" layer="95" align="top-left"/>
 </instance>
-<instance part="GND11" gate="1" x="233.68" y="220.98" smashed="yes">
-<attribute name="VALUE" x="231.14" y="218.44" size="1.778" layer="96"/>
+<instance part="GND11" gate="1" x="238.76" y="233.68" smashed="yes">
+<attribute name="VALUE" x="236.22" y="231.14" size="1.778" layer="96"/>
 </instance>
 <instance part="GND12" gate="1" x="228.6" y="185.42" smashed="yes">
 <attribute name="VALUE" x="226.06" y="182.88" size="1.778" layer="96"/>
@@ -11760,8 +11764,8 @@ POE+ 24V to 10V</text>
 <instance part="U2" gate="G$0" x="152.4" y="121.92" smashed="yes">
 <attribute name="NAME" x="154.94" y="119.38" size="2.54" layer="95" align="top-left"/>
 </instance>
-<instance part="GND18" gate="1" x="233.68" y="121.92" smashed="yes">
-<attribute name="VALUE" x="231.14" y="119.38" size="1.778" layer="96"/>
+<instance part="GND18" gate="1" x="238.76" y="134.62" smashed="yes">
+<attribute name="VALUE" x="236.22" y="132.08" size="1.778" layer="96"/>
 </instance>
 <instance part="GND19" gate="1" x="228.6" y="86.36" smashed="yes">
 <attribute name="VALUE" x="226.06" y="83.82" size="1.778" layer="96"/>
@@ -11788,9 +11792,9 @@ POE+ 24V to 10V</text>
 <instance part="+3V1" gate="G$1" x="312.42" y="114.3" smashed="yes">
 <attribute name="VALUE" x="309.88" y="106.68" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R2_3.7" gate="G$1" x="243.84" y="228.6" smashed="yes" rot="R180">
-<attribute name="NAME" x="243.84" y="227.076" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
-<attribute name="VALUE" x="243.84" y="230.124" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
+<instance part="R2_3.7" gate="G$1" x="248.92" y="228.6" smashed="yes" rot="R90">
+<attribute name="NAME" x="247.396" y="228.6" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="250.444" y="228.6" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="R1_3.7" gate="G$1" x="256.54" y="213.36" smashed="yes">
 <attribute name="NAME" x="256.54" y="214.884" size="1.778" layer="95" font="vector" align="bottom-center"/>
@@ -11812,9 +11816,9 @@ POE+ 24V to 10V</text>
 <attribute name="NAME" x="268.224" y="195.961" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="268.224" y="190.881" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="R2_10" gate="G$1" x="243.84" y="129.54" smashed="yes" rot="R180">
-<attribute name="NAME" x="243.84" y="128.016" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
-<attribute name="VALUE" x="243.84" y="131.064" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
+<instance part="R2_10" gate="G$1" x="248.92" y="129.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="247.396" y="129.54" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="250.444" y="129.54" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="R1_10" gate="G$1" x="256.54" y="114.3" smashed="yes">
 <attribute name="NAME" x="256.54" y="115.824" size="1.778" layer="95" font="vector" align="bottom-center"/>
@@ -11858,6 +11862,13 @@ POE+ 24V to 10V</text>
 <wire x1="228.6" y1="190.5" x2="228.6" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<wire x1="248.92" y1="233.68" x2="248.92" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="241.3" x2="238.76" y2="241.3" width="0.1524" layer="91"/>
+<pinref part="GND11" gate="1" pin="GND"/>
+<wire x1="238.76" y1="241.3" x2="238.76" y2="236.22" width="0.1524" layer="91"/>
+<pinref part="R2_3.7" gate="G$1" pin="2"/>
+</segment>
+<segment>
 <pinref part="D1" gate="G$0" pin="K"/>
 <pinref part="GND17" gate="1" pin="GND"/>
 <wire x1="246.38" y1="182.88" x2="246.38" y2="180.34" width="0.1524" layer="91"/>
@@ -11890,9 +11901,10 @@ POE+ 24V to 10V</text>
 <wire x1="228.6" y1="91.44" x2="228.6" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="238.76" y1="129.54" x2="233.68" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="134.62" x2="248.92" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="142.24" x2="238.76" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="GND18" gate="1" pin="GND"/>
-<wire x1="233.68" y1="129.54" x2="233.68" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="142.24" x2="238.76" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="R2_10" gate="G$1" pin="2"/>
 </segment>
 <segment>
@@ -11904,12 +11916,6 @@ POE+ 24V to 10V</text>
 <pinref part="GND20" gate="1" pin="GND"/>
 <wire x1="266.7" y1="91.44" x2="266.7" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="BYPASS_CAP_OUT_10" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="233.68" y1="223.52" x2="233.68" y2="228.6" width="0.1524" layer="91"/>
-<pinref part="R2_3.7" gate="G$1" pin="2"/>
-<wire x1="233.68" y1="228.6" x2="238.76" y2="228.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -11942,7 +11948,7 @@ POE+ 24V to 10V</text>
 <segment>
 <pinref part="U1" gate="G$0" pin="COMPARATOR_INVERTING_INPUT"/>
 <wire x1="223.52" y1="213.36" x2="248.92" y2="213.36" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="213.36" x2="248.92" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="213.36" x2="248.92" y2="223.52" width="0.1524" layer="91"/>
 <wire x1="251.46" y1="213.36" x2="248.92" y2="213.36" width="0.1524" layer="91"/>
 <junction x="248.92" y="213.36"/>
 <pinref part="R2_3.7" gate="G$1" pin="1"/>
@@ -12004,7 +12010,7 @@ POE+ 24V to 10V</text>
 <segment>
 <pinref part="U2" gate="G$0" pin="COMPARATOR_INVERTING_INPUT"/>
 <wire x1="223.52" y1="114.3" x2="248.92" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="114.3" x2="248.92" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="114.3" x2="248.92" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="251.46" y1="114.3" x2="248.92" y2="114.3" width="0.1524" layer="91"/>
 <junction x="248.92" y="114.3"/>
 <pinref part="R2_10" gate="G$1" pin="1"/>
@@ -12044,8 +12050,8 @@ POE+ 24V to 10V</text>
 <junction x="121.92" y="114.3"/>
 <wire x1="121.92" y1="114.3" x2="121.92" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="124.46" x2="127" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="114.3" x2="99.06" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="114.3" x2="99.06" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="114.3" x2="106.68" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="127" x2="99.06" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="198.12" x2="109.22" y2="198.12" width="0.1524" layer="91"/>
 <pinref part="POE_IN" gate="G$1" pin="PWR"/>
 <wire x1="83.82" y1="213.36" x2="109.22" y2="213.36" width="0.1524" layer="91"/>
@@ -12058,6 +12064,8 @@ POE+ 24V to 10V</text>
 <wire x1="121.92" y1="223.52" x2="127" y2="223.52" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="198.12" x2="109.22" y2="213.36" width="0.1524" layer="91"/>
 <junction x="109.22" y="213.36"/>
+<wire x1="99.06" y1="127" x2="106.68" y2="127" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="127" x2="106.68" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="BYPASS_CAP_INP_3.7" gate="G$1" pin="1"/>
 <pinref part="R_SC_3.7" gate="G$1" pin="1"/>
 <pinref part="R_SC_10" gate="G$1" pin="1"/>
