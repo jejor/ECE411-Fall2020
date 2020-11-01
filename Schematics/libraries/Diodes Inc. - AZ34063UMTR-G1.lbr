@@ -1,432 +1,433 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle>
-    <drawing>
-        <grid unitdist="mm" unit="mm"/>
-        <layers>
-            <layer name="Top" color="4" number="1" visible="yes" active="yes" fill="1"/>
-            <layer name="tKeepout" color="0" number="4" visible="yes" active="yes" fill="1"/>
-            <layer name="Bottom" color="4" number="16" visible="yes" active="yes" fill="1"/>
-            <layer name="tPlace" color="7" number="21" visible="yes" active="yes" fill="1"/>
-            <layer name="bPlace" color="7" number="22" visible="yes" active="yes" fill="1"/>
-            <layer name="tNames" color="7" number="25" visible="yes" active="yes" fill="1"/>
-            <layer name="bNames" color="7" number="26" visible="yes" active="yes" fill="1"/>
-            <layer name="tValues" color="7" number="27" visible="yes" active="yes" fill="1"/>
-            <layer name="bValues" color="7" number="28" visible="yes" active="yes" fill="1"/>
-            <layer name="tStop" color="7" number="29" visible="yes" active="yes" fill="1"/>
-            <layer name="bStop" color="7" number="30" visible="yes" active="yes" fill="1"/>
-            <layer name="tCream" color="7" number="31" visible="yes" active="yes" fill="1"/>
-            <layer name="bCream" color="7" number="32" visible="yes" active="yes" fill="1"/>
-            <layer name="bKeepout" color="0" number="40" visible="yes" active="yes" fill="1"/>
-            <layer name="tRestrict" color="4" number="41" visible="yes" active="yes" fill="1"/>
-            <layer name="bRestrict" color="4" number="42" visible="yes" active="yes" fill="1"/>
-            <layer name="tDocu" color="7" number="51" visible="yes" active="yes" fill="1"/>
-            <layer name="bDocu" color="7" number="52" visible="yes" active="yes" fill="1"/>
-            <layer name="Nets" color="2" number="91" visible="yes" active="yes" fill="1"/>
-            <layer name="Busses" color="1" number="92" visible="yes" active="yes" fill="1"/>
-            <layer name="Pins" color="2" number="93" visible="yes" active="yes" fill="1"/>
-            <layer name="Symbols" color="4" number="94" visible="yes" active="yes" fill="1"/>
-            <layer name="Names" color="7" number="95" visible="yes" active="yes" fill="1"/>
-            <layer name="Values" color="7" number="96" visible="yes" active="yes" fill="1"/>
-            <layer name="Info" color="7" number="97" visible="yes" active="yes" fill="1"/>
-            <layer name="Guide" color="6" number="98" visible="yes" active="yes" fill="1"/>
-        </layers>
-        <library name="Upverter Library">
-            <description>Upverter Parts Library
+<eagle version="9.6.2">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="4" name="tKeepout" color="0" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="1" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="1" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="0" fill="1" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="1" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="4" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>Upverter Parts Library
 
 Created by Upverter.com</description>
-            <packages>
-                <package name="DIODES_INC._AZ34063UMTR-G1_0">
-                    <description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
-                    <wire layer="51" y2="2.475" width="0.15" x2="-1.975" y1="-2.475" x1="-1.975"/>
-                    <wire layer="51" y2="2.475" width="0.15" x2="1.975" y1="2.475" x1="-1.975"/>
-                    <wire layer="51" y2="-2.475" width="0.15" x2="1.975" y1="2.475" x1="1.975"/>
-                    <wire layer="51" y2="-2.475" width="0.15" x2="-1.975" y1="-2.475" x1="1.975"/>
-                    <wire layer="41" y2="2.575" width="0.1" x2="-3.35" y1="-2.575" x1="-3.35"/>
-                    <wire layer="41" y2="2.575" width="0.1" x2="3.35" y1="2.575" x1="-3.35"/>
-                    <wire layer="41" y2="-2.575" width="0.1" x2="3.35" y1="2.575" x1="3.35"/>
-                    <wire layer="41" y2="-2.575" width="0.1" x2="-3.35" y1="-2.575" x1="3.35"/>
-                    <wire layer="21" y2="2.475" width="0.15" x2="1.37" y1="2.475" x1="-1.37"/>
-                    <wire layer="21" y2="-2.475" width="0.15" x2="1.37" y1="-2.475" x1="-1.37"/>
-                    <text layer="25" align="bottom-left" y="2.775" x="-1.975" rot="R0" size="1.0">&gt;NAME</text>
-                    <circle y="1.906" x="-4.025" layer="21" radius="0.25" width="0.0"/>
-                    <smd layer="1" thermals="yes" name="1" stop="yes" roundness="0" dx="1.505" dy="0.802" y="1.905" x="-2.498" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="2" stop="yes" roundness="0" dx="1.505" dy="0.802" y="0.635" x="-2.498" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="3" stop="yes" roundness="0" dx="1.505" dy="0.802" y="-0.635" x="-2.498" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="4" stop="yes" roundness="0" dx="1.505" dy="0.802" y="-1.905" x="-2.498" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="5" stop="yes" roundness="0" dx="1.505" dy="0.802" y="-1.905" x="2.498" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="6" stop="yes" roundness="0" dx="1.505" dy="0.802" y="-0.635" x="2.498" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="7" stop="yes" roundness="0" dx="1.505" dy="0.802" y="0.635" x="2.498" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="8" stop="yes" roundness="0" dx="1.505" dy="0.802" y="1.905" x="2.498" rot="R0" cream="yes"/>
-                </package>
-                <package name="DIODES_INC._AZ34063UMTR-G1_1">
-                    <description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
-                    <wire layer="51" y2="2.45" width="0.15" x2="-1.95" y1="-2.45" x1="-1.95"/>
-                    <wire layer="51" y2="2.45" width="0.15" x2="1.95" y1="2.45" x1="-1.95"/>
-                    <wire layer="51" y2="-2.45" width="0.15" x2="1.95" y1="2.45" x1="1.95"/>
-                    <wire layer="51" y2="-2.45" width="0.15" x2="-1.95" y1="-2.45" x1="1.95"/>
-                    <wire layer="41" y2="2.95" width="0.1" x2="-4.106" y1="-2.95" x1="-4.106"/>
-                    <wire layer="41" y2="2.95" width="0.1" x2="4.106" y1="2.95" x1="-4.106"/>
-                    <wire layer="41" y2="-2.95" width="0.1" x2="4.106" y1="2.95" x1="4.106"/>
-                    <wire layer="41" y2="-2.95" width="0.1" x2="-4.106" y1="-2.95" x1="4.106"/>
-                    <wire layer="21" y2="2.45" width="0.15" x2="-1.176" y1="-2.45" x1="-1.176"/>
-                    <wire layer="21" y2="2.45" width="0.15" x2="1.176" y1="2.45" x1="-1.176"/>
-                    <wire layer="21" y2="-2.45" width="0.15" x2="1.176" y1="2.45" x1="1.176"/>
-                    <wire layer="21" y2="-2.45" width="0.15" x2="-1.176" y1="-2.45" x1="1.176"/>
-                    <text layer="25" align="bottom-left" y="3.65" x="-4.606" rot="R0" size="1.0">&gt;NAME</text>
-                    <circle y="1.7" x="-0.426" layer="21" radius="0.5" width="0.0"/>
-                    <circle y="1.905" x="-4.556" layer="21" radius="0.25" width="0.0"/>
-                    <smd layer="1" thermals="yes" name="1" stop="yes" roundness="0" dx="1.93" dy="0.612" y="1.905" x="-2.641" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="2" stop="yes" roundness="100" dx="1.93" dy="0.612" y="0.635" x="-2.641" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="3" stop="yes" roundness="100" dx="1.93" dy="0.612" y="-0.635" x="-2.641" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="4" stop="yes" roundness="100" dx="1.93" dy="0.612" y="-1.905" x="-2.641" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="5" stop="yes" roundness="100" dx="1.93" dy="0.612" y="-1.905" x="2.641" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="6" stop="yes" roundness="100" dx="1.93" dy="0.612" y="-0.635" x="2.641" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="7" stop="yes" roundness="100" dx="1.93" dy="0.612" y="0.635" x="2.641" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="8" stop="yes" roundness="100" dx="1.93" dy="0.612" y="1.905" x="2.641" rot="R0" cream="yes"/>
-                </package>
-                <package name="DIODES_INC._AZ34063UMTR-G1_2">
-                    <description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
-                    <wire layer="51" y2="2.45" width="0.15" x2="-1.95" y1="-2.45" x1="-1.95"/>
-                    <wire layer="51" y2="2.45" width="0.15" x2="1.95" y1="2.45" x1="-1.95"/>
-                    <wire layer="51" y2="-2.45" width="0.15" x2="1.95" y1="2.45" x1="1.95"/>
-                    <wire layer="51" y2="-2.45" width="0.15" x2="-1.95" y1="-2.45" x1="1.95"/>
-                    <wire layer="41" y2="2.7" width="0.1" x2="-3.656" y1="-2.7" x1="-3.656"/>
-                    <wire layer="41" y2="2.7" width="0.1" x2="3.656" y1="2.7" x1="-3.656"/>
-                    <wire layer="41" y2="-2.7" width="0.1" x2="3.656" y1="2.7" x1="3.656"/>
-                    <wire layer="41" y2="-2.7" width="0.1" x2="-3.656" y1="-2.7" x1="3.656"/>
-                    <wire layer="21" y2="2.45" width="0.15" x2="-1.276" y1="-2.45" x1="-1.276"/>
-                    <wire layer="21" y2="2.45" width="0.15" x2="1.276" y1="2.45" x1="-1.276"/>
-                    <wire layer="21" y2="-2.45" width="0.15" x2="1.276" y1="2.45" x1="1.276"/>
-                    <wire layer="21" y2="-2.45" width="0.15" x2="-1.276" y1="-2.45" x1="1.276"/>
-                    <text layer="25" align="bottom-left" y="3.15" x="-3.906" rot="R0" size="1.0">&gt;NAME</text>
-                    <circle y="1.7" x="-0.526" layer="21" radius="0.5" width="0.0"/>
-                    <circle y="1.905" x="-4.256" layer="21" radius="0.25" width="0.0"/>
-                    <smd layer="1" thermals="yes" name="1" stop="yes" roundness="0" dx="1.63" dy="0.572" y="1.905" x="-2.591" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="2" stop="yes" roundness="100" dx="1.63" dy="0.572" y="0.635" x="-2.591" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="3" stop="yes" roundness="100" dx="1.63" dy="0.572" y="-0.635" x="-2.591" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="4" stop="yes" roundness="100" dx="1.63" dy="0.572" y="-1.905" x="-2.591" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="5" stop="yes" roundness="100" dx="1.63" dy="0.572" y="-1.905" x="2.591" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="6" stop="yes" roundness="100" dx="1.63" dy="0.572" y="-0.635" x="2.591" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="7" stop="yes" roundness="100" dx="1.63" dy="0.572" y="0.635" x="2.591" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="8" stop="yes" roundness="100" dx="1.63" dy="0.572" y="1.905" x="2.591" rot="R0" cream="yes"/>
-                </package>
-                <package name="DIODES_INC._AZ34063UMTR-G1_3">
-                    <description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
-                    <wire layer="51" y2="2.45" width="0.15" x2="-1.95" y1="-2.45" x1="-1.95"/>
-                    <wire layer="51" y2="2.45" width="0.15" x2="1.95" y1="2.45" x1="-1.95"/>
-                    <wire layer="51" y2="-2.45" width="0.15" x2="1.95" y1="2.45" x1="1.95"/>
-                    <wire layer="51" y2="-2.45" width="0.15" x2="-1.95" y1="-2.45" x1="1.95"/>
-                    <wire layer="41" y2="2.55" width="0.1" x2="-3.306" y1="-2.55" x1="-3.306"/>
-                    <wire layer="41" y2="2.55" width="0.1" x2="3.306" y1="2.55" x1="-3.306"/>
-                    <wire layer="41" y2="-2.55" width="0.1" x2="3.306" y1="2.55" x1="3.306"/>
-                    <wire layer="41" y2="-2.55" width="0.1" x2="-3.306" y1="-2.55" x1="3.306"/>
-                    <wire layer="21" y2="2.45" width="0.15" x2="-1.376" y1="-2.45" x1="-1.376"/>
-                    <wire layer="21" y2="2.45" width="0.15" x2="1.376" y1="2.45" x1="-1.376"/>
-                    <wire layer="21" y2="-2.45" width="0.15" x2="1.376" y1="2.45" x1="1.376"/>
-                    <wire layer="21" y2="-2.45" width="0.15" x2="-1.376" y1="-2.45" x1="1.376"/>
-                    <text layer="25" align="bottom-left" y="2.85" x="-3.406" rot="R0" size="1.0">&gt;NAME</text>
-                    <circle y="1.7" x="-0.626" layer="21" radius="0.5" width="0.0"/>
-                    <circle y="1.905" x="-3.906" layer="21" radius="0.25" width="0.0"/>
-                    <smd layer="1" thermals="yes" name="1" stop="yes" roundness="0" dx="1.33" dy="0.532" y="1.905" x="-2.541" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="2" stop="yes" roundness="100" dx="1.33" dy="0.532" y="0.635" x="-2.541" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="3" stop="yes" roundness="100" dx="1.33" dy="0.532" y="-0.635" x="-2.541" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="4" stop="yes" roundness="100" dx="1.33" dy="0.532" y="-1.905" x="-2.541" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="5" stop="yes" roundness="100" dx="1.33" dy="0.532" y="-1.905" x="2.541" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="6" stop="yes" roundness="100" dx="1.33" dy="0.532" y="-0.635" x="2.541" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="7" stop="yes" roundness="100" dx="1.33" dy="0.532" y="0.635" x="2.541" rot="R0" cream="yes"/>
-                    <smd layer="1" thermals="yes" name="8" stop="yes" roundness="100" dx="1.33" dy="0.532" y="1.905" x="2.541" rot="R0" cream="yes"/>
-                </package>
-            </packages>
-            <symbols>
-                <symbol name="DIODES_INC._AZ34063UMTR-G1_0_0">
-                    <description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
-                    <wire layer="94" y2="-5.08" width="0.254" x2="2.54" y1="-33.02" x1="2.54"/>
-                    <wire layer="94" y2="-5.08" width="0.254" x2="66.04" y1="-5.08" x1="2.54"/>
-                    <wire layer="94" y2="-33.02" width="0.254" x2="66.04" y1="-5.08" x1="66.04"/>
-                    <wire layer="94" y2="-33.02" width="0.254" x2="2.54" y1="-33.02" x1="66.04"/>
-                    <wire layer="94" y2="-7.62" width="0.15" x2="2.54" y1="-7.62" x1="2.54"/>
-                    <wire layer="94" y2="-12.7" width="0.15" x2="66.04" y1="-12.7" x1="66.04"/>
-                    <wire layer="94" y2="-17.78" width="0.15" x2="66.04" y1="-17.78" x1="66.04"/>
-                    <wire layer="94" y2="-7.62" width="0.15" x2="66.04" y1="-7.62" x1="66.04"/>
-                    <wire layer="94" y2="-25.4" width="0.15" x2="66.04" y1="-25.4" x1="66.04"/>
-                    <wire layer="94" y2="-15.24" width="0.15" x2="2.54" y1="-15.24" x1="2.54"/>
-                    <wire layer="94" y2="-20.32" width="0.15" x2="2.54" y1="-20.32" x1="2.54"/>
-                    <wire layer="94" y2="-30.48" width="0.15" x2="66.04" y1="-30.48" x1="66.04"/>
-                    <text layer="95" align="top-left" y="-2.54" x="2.54" rot="R0" size="2.54">&gt;NAME</text>
-                    <text layer="95" align="top-left" y="-38.1" x="2.54" rot="R0" size="2.54">AZ34063UMTR-G1</text>
-                    <pin direction="pwr" name="VCC" visible="both" length="middle" y="-7.62" x="-2.54"/>
-                    <pin direction="pas" name="SWITCH_COLLECTOR" visible="both" length="middle" y="-12.7" x="71.12" rot="R180"/>
-                    <pin direction="pas" name="SWITCH_EMITTER" visible="both" length="middle" y="-17.78" x="71.12" rot="R180"/>
-                    <pin direction="pas" name="COMPARATOR_INVERTING_INPUT" visible="both" length="middle" y="-7.62" x="71.12" rot="R180"/>
-                    <pin direction="pas" name="DRIVER_COLLECTOR" visible="both" length="middle" y="-25.4" x="71.12" rot="R180"/>
-                    <pin direction="in" name="IPK_SENSE" visible="both" length="middle" y="-15.24" x="-2.54"/>
-                    <pin direction="pas" name="TIMING_CAPACITOR" visible="both" length="middle" y="-20.32" x="-2.54"/>
-                    <pin direction="pwr" name="GND" visible="both" length="middle" y="-30.48" x="71.12" rot="R180"/>
-                </symbol>
-            </symbols>
-            <devicesets>
-                <deviceset prefix="U" name="DIODES_INC._AZ34063UMTR-G1">
-                    <description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
-                    <gates>
-                        <gate name="G$0" symbol="DIODES_INC._AZ34063UMTR-G1_0_0" x="0"/>
-                    </gates>
-                    <devices>
-                        <device name="DIODES_INC._AZ34063UMTR-G1_0_0" package="DIODES_INC._AZ34063UMTR-G1_0">
-                            <connects>
-                                <connect gate="G$0" pad="1" pin="SWITCH_COLLECTOR"/>
-                                <connect gate="G$0" pad="2" pin="SWITCH_EMITTER"/>
-                                <connect gate="G$0" pad="3" pin="TIMING_CAPACITOR"/>
-                                <connect gate="G$0" pad="4" pin="GND"/>
-                                <connect gate="G$0" pad="5" pin="COMPARATOR_INVERTING_INPUT"/>
-                                <connect gate="G$0" pad="6" pin="VCC"/>
-                                <connect gate="G$0" pad="7" pin="IPK_SENSE"/>
-                                <connect gate="G$0" pad="8" pin="DRIVER_COLLECTOR"/>
-                            </connects>
-                            <technologies>
-                                <technology>
-                                    <attribute name="mouser_description" value="Voltage Regulators - Switching Regulators 1.5A Step-Down/Up 3.0V to 36V 180kHz"/>
-                                    <attribute name="ambient_temperature_range_low" value="-40°C"/>
-                                    <attribute name="mouser_part_number" value="621-AZ34063UMTR-G1"/>
-                                    <attribute name="mfg_package_ident_rev" value="0"/>
-                                    <attribute name="footprint_parameters_1" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":550000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":450000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":50000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":500000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"A","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="max_junction_temp" value="+150°C"/>
-                                    <attribute name="footprint_parameters_3" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":150000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":250000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":10000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":100000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"C","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="footprint_parameters_2" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":350000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":350000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":30000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":250000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"B","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="max_power_dissipation" value="780mW"/>
-                                    <attribute name="temperature_range_high" value="+85°C"/>
-                                    <attribute name="ambient_temperature_range_high" value="+85°C"/>
-                                    <attribute name="digikey_description" value="IC REG BUCK BST ADJ 1.5A 8SOIC"/>
-                                    <attribute name="device_class_L3" value="Voltage Regulators - Switching"/>
-                                    <attribute name="device_class_L1" value="Integrated Circuits (ICs)"/>
-                                    <attribute name="digikey_part_number" value="AZ34063UMTR-G1DICT-ND"/>
-                                    <attribute name="max_supply_voltage" value="36V"/>
-                                    <attribute name="prefix" value="U"/>
-                                    <attribute name="verification_version" value="0.0.0.3"/>
-                                    <attribute name="datasheet" value="https://www.diodes.com/assets/Datasheets/AZ34063U.pdf"/>
-                                    <attribute name="MF" value="Diodes Inc."/>
-                                    <attribute name="footprint_url" value="https://www.diodes.com/assets/Package-Files/SO-8.pdf"/>
-                                    <attribute name="nominal_supply_current" value="4mA"/>
-                                    <attribute name="lead_free" value="Yes"/>
-                                    <attribute name="height" value="1.7mm"/>
-                                    <attribute name="automotive" value="No"/>
-                                    <attribute name="mfg_package_ident" value="SO-8"/>
-                                    <attribute name="footprint_variant_name_0" value="Recommended_Land_Pattern"/>
-                                    <attribute name="footprint_variant_name_1" value="IPC_A"/>
-                                    <attribute name="footprint_variant_name_2" value="IPC_B"/>
-                                    <attribute name="footprint_variant_name_3" value="IPC_C"/>
-                                    <attribute name="MPN" value="AZ34063UMTR-G1"/>
-                                    <attribute name="temperature_range_low" value="-40°C"/>
-                                    <attribute name="min_supply_voltage" value="3V"/>
-                                    <attribute name="rohs" value="Yes"/>
-                                    <attribute name="output_current" value="1.5A"/>
-                                    <attribute name="package" value="SOIC8"/>
-                                    <attribute name="switching_frequency" value="38kHz"/>
-                                    <attribute name="standoff_height" value="0.1mm"/>
-                                    <attribute name="mfg_package_ident_date" value="03/2017"/>
-                                    <attribute name="mfg_package_ident_component_id" value="5582ebb69da50281"/>
-                                    <attribute name="output_type" value="AdjustableProgrammable"/>
-                                    <attribute name="ipc_land_pattern_name" value="SOIC127P600X160-8"/>
-                                    <attribute name="output_voltage" value="1.25-36V"/>
-                                    <attribute name="number_of_outputs" value="1"/>
-                                    <attribute name="centroid_not_specified" value="No"/>
-                                    <attribute name="device_class_L2" value="Power Management ICs"/>
-                                    <attribute name="switching_topology" value="Buck-Boost"/>
-                                </technology>
-                            </technologies>
-                        </device>
-                        <device name="DIODES_INC._AZ34063UMTR-G1_0_1" package="DIODES_INC._AZ34063UMTR-G1_1">
-                            <connects>
-                                <connect gate="G$0" pad="1" pin="SWITCH_COLLECTOR"/>
-                                <connect gate="G$0" pad="2" pin="SWITCH_EMITTER"/>
-                                <connect gate="G$0" pad="3" pin="TIMING_CAPACITOR"/>
-                                <connect gate="G$0" pad="4" pin="GND"/>
-                                <connect gate="G$0" pad="5" pin="COMPARATOR_INVERTING_INPUT"/>
-                                <connect gate="G$0" pad="6" pin="VCC"/>
-                                <connect gate="G$0" pad="7" pin="IPK_SENSE"/>
-                                <connect gate="G$0" pad="8" pin="DRIVER_COLLECTOR"/>
-                            </connects>
-                            <technologies>
-                                <technology>
-                                    <attribute name="mouser_description" value="Voltage Regulators - Switching Regulators 1.5A Step-Down/Up 3.0V to 36V 180kHz"/>
-                                    <attribute name="ambient_temperature_range_low" value="-40°C"/>
-                                    <attribute name="mouser_part_number" value="621-AZ34063UMTR-G1"/>
-                                    <attribute name="mfg_package_ident_rev" value="0"/>
-                                    <attribute name="footprint_parameters_1" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":550000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":450000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":50000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":500000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"A","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="max_junction_temp" value="+150°C"/>
-                                    <attribute name="footprint_parameters_3" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":150000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":250000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":10000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":100000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"C","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="footprint_parameters_2" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":350000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":350000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":30000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":250000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"B","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="max_power_dissipation" value="780mW"/>
-                                    <attribute name="temperature_range_high" value="+85°C"/>
-                                    <attribute name="ambient_temperature_range_high" value="+85°C"/>
-                                    <attribute name="digikey_description" value="IC REG BUCK BST ADJ 1.5A 8SOIC"/>
-                                    <attribute name="device_class_L3" value="Voltage Regulators - Switching"/>
-                                    <attribute name="device_class_L1" value="Integrated Circuits (ICs)"/>
-                                    <attribute name="digikey_part_number" value="AZ34063UMTR-G1DICT-ND"/>
-                                    <attribute name="max_supply_voltage" value="36V"/>
-                                    <attribute name="prefix" value="U"/>
-                                    <attribute name="verification_version" value="0.0.0.3"/>
-                                    <attribute name="datasheet" value="https://www.diodes.com/assets/Datasheets/AZ34063U.pdf"/>
-                                    <attribute name="MF" value="Diodes Inc."/>
-                                    <attribute name="footprint_url" value="https://www.diodes.com/assets/Package-Files/SO-8.pdf"/>
-                                    <attribute name="nominal_supply_current" value="4mA"/>
-                                    <attribute name="lead_free" value="Yes"/>
-                                    <attribute name="height" value="1.7mm"/>
-                                    <attribute name="automotive" value="No"/>
-                                    <attribute name="mfg_package_ident" value="SO-8"/>
-                                    <attribute name="footprint_variant_name_0" value="Recommended_Land_Pattern"/>
-                                    <attribute name="footprint_variant_name_1" value="IPC_A"/>
-                                    <attribute name="footprint_variant_name_2" value="IPC_B"/>
-                                    <attribute name="footprint_variant_name_3" value="IPC_C"/>
-                                    <attribute name="MPN" value="AZ34063UMTR-G1"/>
-                                    <attribute name="temperature_range_low" value="-40°C"/>
-                                    <attribute name="min_supply_voltage" value="3V"/>
-                                    <attribute name="rohs" value="Yes"/>
-                                    <attribute name="output_current" value="1.5A"/>
-                                    <attribute name="package" value="SOIC8"/>
-                                    <attribute name="switching_frequency" value="38kHz"/>
-                                    <attribute name="standoff_height" value="0.1mm"/>
-                                    <attribute name="mfg_package_ident_date" value="03/2017"/>
-                                    <attribute name="mfg_package_ident_component_id" value="5582ebb69da50281"/>
-                                    <attribute name="output_type" value="AdjustableProgrammable"/>
-                                    <attribute name="ipc_land_pattern_name" value="SOIC127P600X160-8"/>
-                                    <attribute name="output_voltage" value="1.25-36V"/>
-                                    <attribute name="number_of_outputs" value="1"/>
-                                    <attribute name="centroid_not_specified" value="No"/>
-                                    <attribute name="device_class_L2" value="Power Management ICs"/>
-                                    <attribute name="switching_topology" value="Buck-Boost"/>
-                                </technology>
-                            </technologies>
-                        </device>
-                        <device name="DIODES_INC._AZ34063UMTR-G1_0_2" package="DIODES_INC._AZ34063UMTR-G1_2">
-                            <connects>
-                                <connect gate="G$0" pad="1" pin="SWITCH_COLLECTOR"/>
-                                <connect gate="G$0" pad="2" pin="SWITCH_EMITTER"/>
-                                <connect gate="G$0" pad="3" pin="TIMING_CAPACITOR"/>
-                                <connect gate="G$0" pad="4" pin="GND"/>
-                                <connect gate="G$0" pad="5" pin="COMPARATOR_INVERTING_INPUT"/>
-                                <connect gate="G$0" pad="6" pin="VCC"/>
-                                <connect gate="G$0" pad="7" pin="IPK_SENSE"/>
-                                <connect gate="G$0" pad="8" pin="DRIVER_COLLECTOR"/>
-                            </connects>
-                            <technologies>
-                                <technology>
-                                    <attribute name="mouser_description" value="Voltage Regulators - Switching Regulators 1.5A Step-Down/Up 3.0V to 36V 180kHz"/>
-                                    <attribute name="ambient_temperature_range_low" value="-40°C"/>
-                                    <attribute name="mouser_part_number" value="621-AZ34063UMTR-G1"/>
-                                    <attribute name="mfg_package_ident_rev" value="0"/>
-                                    <attribute name="footprint_parameters_1" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":550000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":450000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":50000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":500000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"A","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="max_junction_temp" value="+150°C"/>
-                                    <attribute name="footprint_parameters_3" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":150000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":250000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":10000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":100000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"C","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="footprint_parameters_2" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":350000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":350000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":30000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":250000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"B","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="max_power_dissipation" value="780mW"/>
-                                    <attribute name="temperature_range_high" value="+85°C"/>
-                                    <attribute name="ambient_temperature_range_high" value="+85°C"/>
-                                    <attribute name="digikey_description" value="IC REG BUCK BST ADJ 1.5A 8SOIC"/>
-                                    <attribute name="device_class_L3" value="Voltage Regulators - Switching"/>
-                                    <attribute name="device_class_L1" value="Integrated Circuits (ICs)"/>
-                                    <attribute name="digikey_part_number" value="AZ34063UMTR-G1DICT-ND"/>
-                                    <attribute name="max_supply_voltage" value="36V"/>
-                                    <attribute name="prefix" value="U"/>
-                                    <attribute name="verification_version" value="0.0.0.3"/>
-                                    <attribute name="datasheet" value="https://www.diodes.com/assets/Datasheets/AZ34063U.pdf"/>
-                                    <attribute name="MF" value="Diodes Inc."/>
-                                    <attribute name="footprint_url" value="https://www.diodes.com/assets/Package-Files/SO-8.pdf"/>
-                                    <attribute name="nominal_supply_current" value="4mA"/>
-                                    <attribute name="lead_free" value="Yes"/>
-                                    <attribute name="height" value="1.7mm"/>
-                                    <attribute name="automotive" value="No"/>
-                                    <attribute name="mfg_package_ident" value="SO-8"/>
-                                    <attribute name="footprint_variant_name_0" value="Recommended_Land_Pattern"/>
-                                    <attribute name="footprint_variant_name_1" value="IPC_A"/>
-                                    <attribute name="footprint_variant_name_2" value="IPC_B"/>
-                                    <attribute name="footprint_variant_name_3" value="IPC_C"/>
-                                    <attribute name="MPN" value="AZ34063UMTR-G1"/>
-                                    <attribute name="temperature_range_low" value="-40°C"/>
-                                    <attribute name="min_supply_voltage" value="3V"/>
-                                    <attribute name="rohs" value="Yes"/>
-                                    <attribute name="output_current" value="1.5A"/>
-                                    <attribute name="package" value="SOIC8"/>
-                                    <attribute name="switching_frequency" value="38kHz"/>
-                                    <attribute name="standoff_height" value="0.1mm"/>
-                                    <attribute name="mfg_package_ident_date" value="03/2017"/>
-                                    <attribute name="mfg_package_ident_component_id" value="5582ebb69da50281"/>
-                                    <attribute name="output_type" value="AdjustableProgrammable"/>
-                                    <attribute name="ipc_land_pattern_name" value="SOIC127P600X160-8"/>
-                                    <attribute name="output_voltage" value="1.25-36V"/>
-                                    <attribute name="number_of_outputs" value="1"/>
-                                    <attribute name="centroid_not_specified" value="No"/>
-                                    <attribute name="device_class_L2" value="Power Management ICs"/>
-                                    <attribute name="switching_topology" value="Buck-Boost"/>
-                                </technology>
-                            </technologies>
-                        </device>
-                        <device name="DIODES_INC._AZ34063UMTR-G1_0_3" package="DIODES_INC._AZ34063UMTR-G1_3">
-                            <connects>
-                                <connect gate="G$0" pad="1" pin="SWITCH_COLLECTOR"/>
-                                <connect gate="G$0" pad="2" pin="SWITCH_EMITTER"/>
-                                <connect gate="G$0" pad="3" pin="TIMING_CAPACITOR"/>
-                                <connect gate="G$0" pad="4" pin="GND"/>
-                                <connect gate="G$0" pad="5" pin="COMPARATOR_INVERTING_INPUT"/>
-                                <connect gate="G$0" pad="6" pin="VCC"/>
-                                <connect gate="G$0" pad="7" pin="IPK_SENSE"/>
-                                <connect gate="G$0" pad="8" pin="DRIVER_COLLECTOR"/>
-                            </connects>
-                            <technologies>
-                                <technology>
-                                    <attribute name="mouser_description" value="Voltage Regulators - Switching Regulators 1.5A Step-Down/Up 3.0V to 36V 180kHz"/>
-                                    <attribute name="ambient_temperature_range_low" value="-40°C"/>
-                                    <attribute name="mouser_part_number" value="621-AZ34063UMTR-G1"/>
-                                    <attribute name="mfg_package_ident_rev" value="0"/>
-                                    <attribute name="footprint_parameters_1" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":550000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":450000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":50000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":500000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"A","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="max_junction_temp" value="+150°C"/>
-                                    <attribute name="footprint_parameters_3" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":150000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":250000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":10000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":100000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"C","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="footprint_parameters_2" value='{"fp_type":"SOIC_narrow","params":{"N":{"nom":"8","long name":"Number of leads","min":null,"max":null,"short name":"N","type":"count"},"A":{"nom":1600000,"long name":"Height","min":1500000,"max":1700000,"short name":"A","type":"measurement"},"A1":{"nom":150000,"long name":"Package clearance","min":100000,"max":200000,"short name":"A1","type":"measurement"},"A2":{"nom":1450000,"long name":"Package height","min":1400000,"max":1500000,"short name":"A2","type":"measurement"},"D":{"nom":4900000,"long name":"Package length","min":4850000,"max":4950000,"short name":"D","type":"measurement"},"E":{"nom":6000000,"long name":"Width w/ leads","min":5900000,"max":6100000,"short name":"E","type":"measurement"},"E1":{"nom":3900000,"long name":"Package width","min":3850000,"max":3950000,"short name":"E1","type":"measurement"},"B":{"nom":400000,"long name":"Lead width","min":300000,"max":500000,"short name":"B","type":"measurement"},"C":{"nom":200000,"long name":"Lead thickness","min":150000,"max":250000,"short name":"C","type":"measurement"},"e":{"nom":1270000,"long name":"Lead pitch","min":null,"max":null,"short name":"e","type":"measurement"},"L":{"nom":720000,"long name":"Lead foot length","min":620000,"max":820000,"short name":"L","type":"measurement"},"PHI":{"nom":4000000,"long name":"Lead foot angle","min":1000000,"max":7000000,"short name":"PHI","type":"measurement"},"HT":{"default":"No","long name":"Thermal pad","type":"multichoiceparent","short name":"HT","children":[]},"offset x":{"nom":0,"long name":"X Center offset","min":null,"max":null,"short name":"offset x","type":"measurement"},"offset y":{"nom":0,"long name":"Y Center offset","min":null,"max":null,"short name":"offset y","type":"measurement"},"LS":{"default":"Rounded rectangle","long name":"Land shape","type":"multichoice","short name":"LS"},"LS1":{"default":"Rectangle","long name":"Land shape (Pin 1)","type":"multichoice","short name":"LS1"},"solder toe":{"nom":350000,"long name":"Solder fillet (toe)","min":null,"max":null,"short name":"solder toe","type":"fixedmeasurement"},"solder heel":{"nom":350000,"long name":"Solder fillet (heel)","min":null,"max":null,"short name":"solder heel","type":"fixedmeasurement"},"solder side":{"nom":30000,"long name":"Solder fillet (side)","min":null,"max":null,"short name":"solder side","type":"fixedmeasurement"},"courtyard":{"nom":250000,"long name":"Courtyard","min":null,"max":null,"short name":"courtyard","type":"fixedmeasurement"},"SF":{"default":"B","long name":"Packing level","type":"multichoiceparent","short name":"SF","help":"http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level","children":["solder toe","solder heel","solder side","courtyard"]}}}'/>
-                                    <attribute name="max_power_dissipation" value="780mW"/>
-                                    <attribute name="temperature_range_high" value="+85°C"/>
-                                    <attribute name="ambient_temperature_range_high" value="+85°C"/>
-                                    <attribute name="digikey_description" value="IC REG BUCK BST ADJ 1.5A 8SOIC"/>
-                                    <attribute name="device_class_L3" value="Voltage Regulators - Switching"/>
-                                    <attribute name="device_class_L1" value="Integrated Circuits (ICs)"/>
-                                    <attribute name="digikey_part_number" value="AZ34063UMTR-G1DICT-ND"/>
-                                    <attribute name="max_supply_voltage" value="36V"/>
-                                    <attribute name="prefix" value="U"/>
-                                    <attribute name="verification_version" value="0.0.0.3"/>
-                                    <attribute name="datasheet" value="https://www.diodes.com/assets/Datasheets/AZ34063U.pdf"/>
-                                    <attribute name="MF" value="Diodes Inc."/>
-                                    <attribute name="footprint_url" value="https://www.diodes.com/assets/Package-Files/SO-8.pdf"/>
-                                    <attribute name="nominal_supply_current" value="4mA"/>
-                                    <attribute name="lead_free" value="Yes"/>
-                                    <attribute name="height" value="1.7mm"/>
-                                    <attribute name="automotive" value="No"/>
-                                    <attribute name="mfg_package_ident" value="SO-8"/>
-                                    <attribute name="footprint_variant_name_0" value="Recommended_Land_Pattern"/>
-                                    <attribute name="footprint_variant_name_1" value="IPC_A"/>
-                                    <attribute name="footprint_variant_name_2" value="IPC_B"/>
-                                    <attribute name="footprint_variant_name_3" value="IPC_C"/>
-                                    <attribute name="MPN" value="AZ34063UMTR-G1"/>
-                                    <attribute name="temperature_range_low" value="-40°C"/>
-                                    <attribute name="min_supply_voltage" value="3V"/>
-                                    <attribute name="rohs" value="Yes"/>
-                                    <attribute name="output_current" value="1.5A"/>
-                                    <attribute name="package" value="SOIC8"/>
-                                    <attribute name="switching_frequency" value="38kHz"/>
-                                    <attribute name="standoff_height" value="0.1mm"/>
-                                    <attribute name="mfg_package_ident_date" value="03/2017"/>
-                                    <attribute name="mfg_package_ident_component_id" value="5582ebb69da50281"/>
-                                    <attribute name="output_type" value="AdjustableProgrammable"/>
-                                    <attribute name="ipc_land_pattern_name" value="SOIC127P600X160-8"/>
-                                    <attribute name="output_voltage" value="1.25-36V"/>
-                                    <attribute name="number_of_outputs" value="1"/>
-                                    <attribute name="centroid_not_specified" value="No"/>
-                                    <attribute name="device_class_L2" value="Power Management ICs"/>
-                                    <attribute name="switching_topology" value="Buck-Boost"/>
-                                </technology>
-                            </technologies>
-                        </device>
-                    </devices>
-                </deviceset>
-            </devicesets>
-        </library>
-    </drawing>
+<packages>
+<package name="DIODES_INC._AZ34063UMTR-G1_0">
+<description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
+<wire x1="-1.975" y1="-2.475" x2="-1.975" y2="2.475" width="0.15" layer="51"/>
+<wire x1="-1.975" y1="2.475" x2="1.975" y2="2.475" width="0.15" layer="51"/>
+<wire x1="1.975" y1="2.475" x2="1.975" y2="-2.475" width="0.15" layer="51"/>
+<wire x1="1.975" y1="-2.475" x2="-1.975" y2="-2.475" width="0.15" layer="51"/>
+<wire x1="-1.37" y1="2.475" x2="1.37" y2="2.475" width="0.15" layer="21"/>
+<wire x1="-1.37" y1="-2.475" x2="1.37" y2="-2.475" width="0.15" layer="21"/>
+<text x="-1.975" y="2.775" size="1" layer="25">&gt;NAME</text>
+<circle x="-4.025" y="1.906" radius="0.25" width="0" layer="21"/>
+<smd name="1" x="-2.498" y="1.905" dx="1.505" dy="0.802" layer="1"/>
+<smd name="2" x="-2.498" y="0.635" dx="1.505" dy="0.802" layer="1"/>
+<smd name="3" x="-2.498" y="-0.635" dx="1.505" dy="0.802" layer="1"/>
+<smd name="4" x="-2.498" y="-1.905" dx="1.505" dy="0.802" layer="1"/>
+<smd name="5" x="2.498" y="-1.905" dx="1.505" dy="0.802" layer="1"/>
+<smd name="6" x="2.498" y="-0.635" dx="1.505" dy="0.802" layer="1"/>
+<smd name="7" x="2.498" y="0.635" dx="1.505" dy="0.802" layer="1"/>
+<smd name="8" x="2.498" y="1.905" dx="1.505" dy="0.802" layer="1"/>
+</package>
+<package name="DIODES_INC._AZ34063UMTR-G1_1">
+<description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
+<wire x1="-1.95" y1="-2.45" x2="-1.95" y2="2.45" width="0.15" layer="51"/>
+<wire x1="-1.95" y1="2.45" x2="1.95" y2="2.45" width="0.15" layer="51"/>
+<wire x1="1.95" y1="2.45" x2="1.95" y2="-2.45" width="0.15" layer="51"/>
+<wire x1="1.95" y1="-2.45" x2="-1.95" y2="-2.45" width="0.15" layer="51"/>
+<wire x1="-4.106" y1="-2.95" x2="-4.106" y2="2.95" width="0.1" layer="41"/>
+<wire x1="-4.106" y1="2.95" x2="4.106" y2="2.95" width="0.1" layer="41"/>
+<wire x1="4.106" y1="2.95" x2="4.106" y2="-2.95" width="0.1" layer="41"/>
+<wire x1="4.106" y1="-2.95" x2="-4.106" y2="-2.95" width="0.1" layer="41"/>
+<wire x1="-1.176" y1="-2.45" x2="-1.176" y2="2.45" width="0.15" layer="21"/>
+<wire x1="-1.176" y1="2.45" x2="1.176" y2="2.45" width="0.15" layer="21"/>
+<wire x1="1.176" y1="2.45" x2="1.176" y2="-2.45" width="0.15" layer="21"/>
+<wire x1="1.176" y1="-2.45" x2="-1.176" y2="-2.45" width="0.15" layer="21"/>
+<text x="-4.606" y="3.65" size="1" layer="25">&gt;NAME</text>
+<circle x="-0.426" y="1.7" radius="0.5" width="0" layer="21"/>
+<circle x="-4.556" y="1.905" radius="0.25" width="0" layer="21"/>
+<smd name="1" x="-2.641" y="1.905" dx="1.93" dy="0.612" layer="1"/>
+<smd name="2" x="-2.641" y="0.635" dx="1.93" dy="0.612" layer="1" roundness="100"/>
+<smd name="3" x="-2.641" y="-0.635" dx="1.93" dy="0.612" layer="1" roundness="100"/>
+<smd name="4" x="-2.641" y="-1.905" dx="1.93" dy="0.612" layer="1" roundness="100"/>
+<smd name="5" x="2.641" y="-1.905" dx="1.93" dy="0.612" layer="1" roundness="100"/>
+<smd name="6" x="2.641" y="-0.635" dx="1.93" dy="0.612" layer="1" roundness="100"/>
+<smd name="7" x="2.641" y="0.635" dx="1.93" dy="0.612" layer="1" roundness="100"/>
+<smd name="8" x="2.641" y="1.905" dx="1.93" dy="0.612" layer="1" roundness="100"/>
+</package>
+<package name="DIODES_INC._AZ34063UMTR-G1_2">
+<description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
+<wire x1="-1.95" y1="-2.45" x2="-1.95" y2="2.45" width="0.15" layer="51"/>
+<wire x1="-1.95" y1="2.45" x2="1.95" y2="2.45" width="0.15" layer="51"/>
+<wire x1="1.95" y1="2.45" x2="1.95" y2="-2.45" width="0.15" layer="51"/>
+<wire x1="1.95" y1="-2.45" x2="-1.95" y2="-2.45" width="0.15" layer="51"/>
+<wire x1="-3.656" y1="-2.7" x2="-3.656" y2="2.7" width="0.1" layer="41"/>
+<wire x1="-3.656" y1="2.7" x2="3.656" y2="2.7" width="0.1" layer="41"/>
+<wire x1="3.656" y1="2.7" x2="3.656" y2="-2.7" width="0.1" layer="41"/>
+<wire x1="3.656" y1="-2.7" x2="-3.656" y2="-2.7" width="0.1" layer="41"/>
+<wire x1="-1.276" y1="-2.45" x2="-1.276" y2="2.45" width="0.15" layer="21"/>
+<wire x1="-1.276" y1="2.45" x2="1.276" y2="2.45" width="0.15" layer="21"/>
+<wire x1="1.276" y1="2.45" x2="1.276" y2="-2.45" width="0.15" layer="21"/>
+<wire x1="1.276" y1="-2.45" x2="-1.276" y2="-2.45" width="0.15" layer="21"/>
+<text x="-3.906" y="3.15" size="1" layer="25">&gt;NAME</text>
+<circle x="-0.526" y="1.7" radius="0.5" width="0" layer="21"/>
+<circle x="-4.256" y="1.905" radius="0.25" width="0" layer="21"/>
+<smd name="1" x="-2.591" y="1.905" dx="1.63" dy="0.572" layer="1"/>
+<smd name="2" x="-2.591" y="0.635" dx="1.63" dy="0.572" layer="1" roundness="100"/>
+<smd name="3" x="-2.591" y="-0.635" dx="1.63" dy="0.572" layer="1" roundness="100"/>
+<smd name="4" x="-2.591" y="-1.905" dx="1.63" dy="0.572" layer="1" roundness="100"/>
+<smd name="5" x="2.591" y="-1.905" dx="1.63" dy="0.572" layer="1" roundness="100"/>
+<smd name="6" x="2.591" y="-0.635" dx="1.63" dy="0.572" layer="1" roundness="100"/>
+<smd name="7" x="2.591" y="0.635" dx="1.63" dy="0.572" layer="1" roundness="100"/>
+<smd name="8" x="2.591" y="1.905" dx="1.63" dy="0.572" layer="1" roundness="100"/>
+</package>
+<package name="DIODES_INC._AZ34063UMTR-G1_3">
+<description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
+<wire x1="-1.95" y1="-2.45" x2="-1.95" y2="2.45" width="0.15" layer="51"/>
+<wire x1="-1.95" y1="2.45" x2="1.95" y2="2.45" width="0.15" layer="51"/>
+<wire x1="1.95" y1="2.45" x2="1.95" y2="-2.45" width="0.15" layer="51"/>
+<wire x1="1.95" y1="-2.45" x2="-1.95" y2="-2.45" width="0.15" layer="51"/>
+<wire x1="-3.306" y1="-2.55" x2="-3.306" y2="2.55" width="0.1" layer="41"/>
+<wire x1="-3.306" y1="2.55" x2="3.306" y2="2.55" width="0.1" layer="41"/>
+<wire x1="3.306" y1="2.55" x2="3.306" y2="-2.55" width="0.1" layer="41"/>
+<wire x1="3.306" y1="-2.55" x2="-3.306" y2="-2.55" width="0.1" layer="41"/>
+<wire x1="-1.376" y1="-2.45" x2="-1.376" y2="2.45" width="0.15" layer="21"/>
+<wire x1="-1.376" y1="2.45" x2="1.376" y2="2.45" width="0.15" layer="21"/>
+<wire x1="1.376" y1="2.45" x2="1.376" y2="-2.45" width="0.15" layer="21"/>
+<wire x1="1.376" y1="-2.45" x2="-1.376" y2="-2.45" width="0.15" layer="21"/>
+<text x="-3.406" y="2.85" size="1" layer="25">&gt;NAME</text>
+<circle x="-0.626" y="1.7" radius="0.5" width="0" layer="21"/>
+<circle x="-3.906" y="1.905" radius="0.25" width="0" layer="21"/>
+<smd name="1" x="-2.541" y="1.905" dx="1.33" dy="0.532" layer="1"/>
+<smd name="2" x="-2.541" y="0.635" dx="1.33" dy="0.532" layer="1" roundness="100"/>
+<smd name="3" x="-2.541" y="-0.635" dx="1.33" dy="0.532" layer="1" roundness="100"/>
+<smd name="4" x="-2.541" y="-1.905" dx="1.33" dy="0.532" layer="1" roundness="100"/>
+<smd name="5" x="2.541" y="-1.905" dx="1.33" dy="0.532" layer="1" roundness="100"/>
+<smd name="6" x="2.541" y="-0.635" dx="1.33" dy="0.532" layer="1" roundness="100"/>
+<smd name="7" x="2.541" y="0.635" dx="1.33" dy="0.532" layer="1" roundness="100"/>
+<smd name="8" x="2.541" y="1.905" dx="1.33" dy="0.532" layer="1" roundness="100"/>
+</package>
+</packages>
+<symbols>
+<symbol name="DIODES_INC._AZ34063UMTR-G1_0_0">
+<description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
+<wire x1="2.54" y1="-33.02" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="66.04" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="66.04" y1="-5.08" x2="66.04" y2="-33.02" width="0.254" layer="94"/>
+<wire x1="66.04" y1="-33.02" x2="2.54" y2="-33.02" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="2.54" y2="-7.62" width="0.15" layer="94"/>
+<wire x1="66.04" y1="-12.7" x2="66.04" y2="-12.7" width="0.15" layer="94"/>
+<wire x1="66.04" y1="-17.78" x2="66.04" y2="-17.78" width="0.15" layer="94"/>
+<wire x1="66.04" y1="-7.62" x2="66.04" y2="-7.62" width="0.15" layer="94"/>
+<wire x1="66.04" y1="-25.4" x2="66.04" y2="-25.4" width="0.15" layer="94"/>
+<wire x1="2.54" y1="-15.24" x2="2.54" y2="-15.24" width="0.15" layer="94"/>
+<wire x1="2.54" y1="-20.32" x2="2.54" y2="-20.32" width="0.15" layer="94"/>
+<wire x1="66.04" y1="-30.48" x2="66.04" y2="-30.48" width="0.15" layer="94"/>
+<text x="2.54" y="-2.54" size="2.54" layer="95" align="top-left">&gt;NAME</text>
+<text x="2.54" y="-38.1" size="2.54" layer="95" align="top-left">AZ34063UMTR-G1</text>
+<pin name="VCC" x="-2.54" y="-7.62" length="middle" direction="pwr"/>
+<pin name="SWITCH_COLLECTOR" x="71.12" y="-12.7" length="middle" direction="pas" rot="R180"/>
+<pin name="SWITCH_EMITTER" x="71.12" y="-17.78" length="middle" direction="pas" rot="R180"/>
+<pin name="COMPARATOR_INVERTING_INPUT" x="71.12" y="-7.62" length="middle" direction="pas" rot="R180"/>
+<pin name="DRIVER_COLLECTOR" x="71.12" y="-25.4" length="middle" direction="pas" rot="R180"/>
+<pin name="IPK_SENSE" x="-2.54" y="-15.24" length="middle" direction="in"/>
+<pin name="TIMING_CAPACITOR" x="-2.54" y="-20.32" length="middle" direction="pas"/>
+<pin name="GND" x="71.12" y="-30.48" length="middle" direction="pwr" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DIODES_INC._AZ34063UMTR-G1" prefix="U">
+<description>Buck, Boost Switching Regulator IC Positive or Negative Adjustable 1.25V 1 Output 1.5A (Switch) 8-SOIC (0.154", 3.90mm Width)</description>
+<gates>
+<gate name="G$0" symbol="DIODES_INC._AZ34063UMTR-G1_0_0" x="0" y="0"/>
+</gates>
+<devices>
+<device name="DIODES_INC._AZ34063UMTR-G1_0_0" package="DIODES_INC._AZ34063UMTR-G1_0">
+<connects>
+<connect gate="G$0" pin="COMPARATOR_INVERTING_INPUT" pad="5"/>
+<connect gate="G$0" pin="DRIVER_COLLECTOR" pad="8"/>
+<connect gate="G$0" pin="GND" pad="4"/>
+<connect gate="G$0" pin="IPK_SENSE" pad="7"/>
+<connect gate="G$0" pin="SWITCH_COLLECTOR" pad="1"/>
+<connect gate="G$0" pin="SWITCH_EMITTER" pad="2"/>
+<connect gate="G$0" pin="TIMING_CAPACITOR" pad="3"/>
+<connect gate="G$0" pin="VCC" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AMBIENT_TEMPERATURE_RANGE_HIGH" value="+85°C"/>
+<attribute name="AMBIENT_TEMPERATURE_RANGE_LOW" value="-40°C"/>
+<attribute name="AUTOMOTIVE" value="No"/>
+<attribute name="CENTROID_NOT_SPECIFIED" value="No"/>
+<attribute name="DATASHEET" value="https://www.diodes.com/assets/Datasheets/AZ34063U.pdf"/>
+<attribute name="DEVICE_CLASS_L1" value="Integrated Circuits (ICs)"/>
+<attribute name="DEVICE_CLASS_L2" value="Power Management ICs"/>
+<attribute name="DEVICE_CLASS_L3" value="Voltage Regulators - Switching"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="IC REG BUCK BST ADJ 1.5A 8SOIC"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="AZ34063UMTR-G1DICT-ND"/>
+<attribute name="FOOTPRINT_PARAMETERS_1" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:550000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:450000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:50000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:500000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;A&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_PARAMETERS_2" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:350000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:350000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:30000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:250000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;B&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_PARAMETERS_3" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:250000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:10000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:100000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;C&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_URL" value="https://www.diodes.com/assets/Package-Files/SO-8.pdf"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_0" value="Recommended_Land_Pattern"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_1" value="IPC_A"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_2" value="IPC_B"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_3" value="IPC_C"/>
+<attribute name="HEIGHT" value="1.7mm"/>
+<attribute name="IPC_LAND_PATTERN_NAME" value="SOIC127P600X160-8"/>
+<attribute name="LEAD_FREE" value="Yes"/>
+<attribute name="MAX_JUNCTION_TEMP" value="+150°C"/>
+<attribute name="MAX_POWER_DISSIPATION" value="780mW"/>
+<attribute name="MAX_SUPPLY_VOLTAGE" value="36V"/>
+<attribute name="MF" value="Diodes Inc."/>
+<attribute name="MFG_PACKAGE_IDENT" value="SO-8"/>
+<attribute name="MFG_PACKAGE_IDENT_COMPONENT_ID" value="5582ebb69da50281"/>
+<attribute name="MFG_PACKAGE_IDENT_DATE" value="03/2017"/>
+<attribute name="MFG_PACKAGE_IDENT_REV" value="0"/>
+<attribute name="MIN_SUPPLY_VOLTAGE" value="3V"/>
+<attribute name="MOUSER_DESCRIPTION" value="Voltage Regulators - Switching Regulators 1.5A Step-Down/Up 3.0V to 36V 180kHz"/>
+<attribute name="MOUSER_PART_NUMBER" value="621-AZ34063UMTR-G1"/>
+<attribute name="MPN" value="AZ34063UMTR-G1"/>
+<attribute name="NOMINAL_SUPPLY_CURRENT" value="4mA"/>
+<attribute name="NUMBER_OF_OUTPUTS" value="1"/>
+<attribute name="OUTPUT_CURRENT" value="1.5A"/>
+<attribute name="OUTPUT_TYPE" value="AdjustableProgrammable"/>
+<attribute name="OUTPUT_VOLTAGE" value="1.25-36V"/>
+<attribute name="PACKAGE" value="SOIC8"/>
+<attribute name="PREFIX" value="U"/>
+<attribute name="ROHS" value="Yes"/>
+<attribute name="STANDOFF_HEIGHT" value="0.1mm"/>
+<attribute name="SWITCHING_FREQUENCY" value="38kHz"/>
+<attribute name="SWITCHING_TOPOLOGY" value="Buck-Boost"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+85°C"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-40°C"/>
+<attribute name="VERIFICATION_VERSION" value="0.0.0.3"/>
+</technology>
+</technologies>
+</device>
+<device name="DIODES_INC._AZ34063UMTR-G1_0_1" package="DIODES_INC._AZ34063UMTR-G1_1">
+<connects>
+<connect gate="G$0" pin="COMPARATOR_INVERTING_INPUT" pad="5"/>
+<connect gate="G$0" pin="DRIVER_COLLECTOR" pad="8"/>
+<connect gate="G$0" pin="GND" pad="4"/>
+<connect gate="G$0" pin="IPK_SENSE" pad="7"/>
+<connect gate="G$0" pin="SWITCH_COLLECTOR" pad="1"/>
+<connect gate="G$0" pin="SWITCH_EMITTER" pad="2"/>
+<connect gate="G$0" pin="TIMING_CAPACITOR" pad="3"/>
+<connect gate="G$0" pin="VCC" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AMBIENT_TEMPERATURE_RANGE_HIGH" value="+85°C"/>
+<attribute name="AMBIENT_TEMPERATURE_RANGE_LOW" value="-40°C"/>
+<attribute name="AUTOMOTIVE" value="No"/>
+<attribute name="CENTROID_NOT_SPECIFIED" value="No"/>
+<attribute name="DATASHEET" value="https://www.diodes.com/assets/Datasheets/AZ34063U.pdf"/>
+<attribute name="DEVICE_CLASS_L1" value="Integrated Circuits (ICs)"/>
+<attribute name="DEVICE_CLASS_L2" value="Power Management ICs"/>
+<attribute name="DEVICE_CLASS_L3" value="Voltage Regulators - Switching"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="IC REG BUCK BST ADJ 1.5A 8SOIC"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="AZ34063UMTR-G1DICT-ND"/>
+<attribute name="FOOTPRINT_PARAMETERS_1" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:550000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:450000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:50000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:500000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;A&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_PARAMETERS_2" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:350000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:350000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:30000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:250000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;B&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_PARAMETERS_3" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:250000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:10000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:100000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;C&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_URL" value="https://www.diodes.com/assets/Package-Files/SO-8.pdf"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_0" value="Recommended_Land_Pattern"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_1" value="IPC_A"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_2" value="IPC_B"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_3" value="IPC_C"/>
+<attribute name="HEIGHT" value="1.7mm"/>
+<attribute name="IPC_LAND_PATTERN_NAME" value="SOIC127P600X160-8"/>
+<attribute name="LEAD_FREE" value="Yes"/>
+<attribute name="MAX_JUNCTION_TEMP" value="+150°C"/>
+<attribute name="MAX_POWER_DISSIPATION" value="780mW"/>
+<attribute name="MAX_SUPPLY_VOLTAGE" value="36V"/>
+<attribute name="MF" value="Diodes Inc."/>
+<attribute name="MFG_PACKAGE_IDENT" value="SO-8"/>
+<attribute name="MFG_PACKAGE_IDENT_COMPONENT_ID" value="5582ebb69da50281"/>
+<attribute name="MFG_PACKAGE_IDENT_DATE" value="03/2017"/>
+<attribute name="MFG_PACKAGE_IDENT_REV" value="0"/>
+<attribute name="MIN_SUPPLY_VOLTAGE" value="3V"/>
+<attribute name="MOUSER_DESCRIPTION" value="Voltage Regulators - Switching Regulators 1.5A Step-Down/Up 3.0V to 36V 180kHz"/>
+<attribute name="MOUSER_PART_NUMBER" value="621-AZ34063UMTR-G1"/>
+<attribute name="MPN" value="AZ34063UMTR-G1"/>
+<attribute name="NOMINAL_SUPPLY_CURRENT" value="4mA"/>
+<attribute name="NUMBER_OF_OUTPUTS" value="1"/>
+<attribute name="OUTPUT_CURRENT" value="1.5A"/>
+<attribute name="OUTPUT_TYPE" value="AdjustableProgrammable"/>
+<attribute name="OUTPUT_VOLTAGE" value="1.25-36V"/>
+<attribute name="PACKAGE" value="SOIC8"/>
+<attribute name="PREFIX" value="U"/>
+<attribute name="ROHS" value="Yes"/>
+<attribute name="STANDOFF_HEIGHT" value="0.1mm"/>
+<attribute name="SWITCHING_FREQUENCY" value="38kHz"/>
+<attribute name="SWITCHING_TOPOLOGY" value="Buck-Boost"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+85°C"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-40°C"/>
+<attribute name="VERIFICATION_VERSION" value="0.0.0.3"/>
+</technology>
+</technologies>
+</device>
+<device name="DIODES_INC._AZ34063UMTR-G1_0_2" package="DIODES_INC._AZ34063UMTR-G1_2">
+<connects>
+<connect gate="G$0" pin="COMPARATOR_INVERTING_INPUT" pad="5"/>
+<connect gate="G$0" pin="DRIVER_COLLECTOR" pad="8"/>
+<connect gate="G$0" pin="GND" pad="4"/>
+<connect gate="G$0" pin="IPK_SENSE" pad="7"/>
+<connect gate="G$0" pin="SWITCH_COLLECTOR" pad="1"/>
+<connect gate="G$0" pin="SWITCH_EMITTER" pad="2"/>
+<connect gate="G$0" pin="TIMING_CAPACITOR" pad="3"/>
+<connect gate="G$0" pin="VCC" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AMBIENT_TEMPERATURE_RANGE_HIGH" value="+85°C"/>
+<attribute name="AMBIENT_TEMPERATURE_RANGE_LOW" value="-40°C"/>
+<attribute name="AUTOMOTIVE" value="No"/>
+<attribute name="CENTROID_NOT_SPECIFIED" value="No"/>
+<attribute name="DATASHEET" value="https://www.diodes.com/assets/Datasheets/AZ34063U.pdf"/>
+<attribute name="DEVICE_CLASS_L1" value="Integrated Circuits (ICs)"/>
+<attribute name="DEVICE_CLASS_L2" value="Power Management ICs"/>
+<attribute name="DEVICE_CLASS_L3" value="Voltage Regulators - Switching"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="IC REG BUCK BST ADJ 1.5A 8SOIC"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="AZ34063UMTR-G1DICT-ND"/>
+<attribute name="FOOTPRINT_PARAMETERS_1" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:550000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:450000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:50000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:500000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;A&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_PARAMETERS_2" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:350000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:350000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:30000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:250000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;B&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_PARAMETERS_3" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:250000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:10000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:100000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;C&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_URL" value="https://www.diodes.com/assets/Package-Files/SO-8.pdf"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_0" value="Recommended_Land_Pattern"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_1" value="IPC_A"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_2" value="IPC_B"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_3" value="IPC_C"/>
+<attribute name="HEIGHT" value="1.7mm"/>
+<attribute name="IPC_LAND_PATTERN_NAME" value="SOIC127P600X160-8"/>
+<attribute name="LEAD_FREE" value="Yes"/>
+<attribute name="MAX_JUNCTION_TEMP" value="+150°C"/>
+<attribute name="MAX_POWER_DISSIPATION" value="780mW"/>
+<attribute name="MAX_SUPPLY_VOLTAGE" value="36V"/>
+<attribute name="MF" value="Diodes Inc."/>
+<attribute name="MFG_PACKAGE_IDENT" value="SO-8"/>
+<attribute name="MFG_PACKAGE_IDENT_COMPONENT_ID" value="5582ebb69da50281"/>
+<attribute name="MFG_PACKAGE_IDENT_DATE" value="03/2017"/>
+<attribute name="MFG_PACKAGE_IDENT_REV" value="0"/>
+<attribute name="MIN_SUPPLY_VOLTAGE" value="3V"/>
+<attribute name="MOUSER_DESCRIPTION" value="Voltage Regulators - Switching Regulators 1.5A Step-Down/Up 3.0V to 36V 180kHz"/>
+<attribute name="MOUSER_PART_NUMBER" value="621-AZ34063UMTR-G1"/>
+<attribute name="MPN" value="AZ34063UMTR-G1"/>
+<attribute name="NOMINAL_SUPPLY_CURRENT" value="4mA"/>
+<attribute name="NUMBER_OF_OUTPUTS" value="1"/>
+<attribute name="OUTPUT_CURRENT" value="1.5A"/>
+<attribute name="OUTPUT_TYPE" value="AdjustableProgrammable"/>
+<attribute name="OUTPUT_VOLTAGE" value="1.25-36V"/>
+<attribute name="PACKAGE" value="SOIC8"/>
+<attribute name="PREFIX" value="U"/>
+<attribute name="ROHS" value="Yes"/>
+<attribute name="STANDOFF_HEIGHT" value="0.1mm"/>
+<attribute name="SWITCHING_FREQUENCY" value="38kHz"/>
+<attribute name="SWITCHING_TOPOLOGY" value="Buck-Boost"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+85°C"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-40°C"/>
+<attribute name="VERIFICATION_VERSION" value="0.0.0.3"/>
+</technology>
+</technologies>
+</device>
+<device name="DIODES_INC._AZ34063UMTR-G1_0_3" package="DIODES_INC._AZ34063UMTR-G1_3">
+<connects>
+<connect gate="G$0" pin="COMPARATOR_INVERTING_INPUT" pad="5"/>
+<connect gate="G$0" pin="DRIVER_COLLECTOR" pad="8"/>
+<connect gate="G$0" pin="GND" pad="4"/>
+<connect gate="G$0" pin="IPK_SENSE" pad="7"/>
+<connect gate="G$0" pin="SWITCH_COLLECTOR" pad="1"/>
+<connect gate="G$0" pin="SWITCH_EMITTER" pad="2"/>
+<connect gate="G$0" pin="TIMING_CAPACITOR" pad="3"/>
+<connect gate="G$0" pin="VCC" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AMBIENT_TEMPERATURE_RANGE_HIGH" value="+85°C"/>
+<attribute name="AMBIENT_TEMPERATURE_RANGE_LOW" value="-40°C"/>
+<attribute name="AUTOMOTIVE" value="No"/>
+<attribute name="CENTROID_NOT_SPECIFIED" value="No"/>
+<attribute name="DATASHEET" value="https://www.diodes.com/assets/Datasheets/AZ34063U.pdf"/>
+<attribute name="DEVICE_CLASS_L1" value="Integrated Circuits (ICs)"/>
+<attribute name="DEVICE_CLASS_L2" value="Power Management ICs"/>
+<attribute name="DEVICE_CLASS_L3" value="Voltage Regulators - Switching"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="IC REG BUCK BST ADJ 1.5A 8SOIC"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="AZ34063UMTR-G1DICT-ND"/>
+<attribute name="FOOTPRINT_PARAMETERS_1" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:550000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:450000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:50000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:500000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;A&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_PARAMETERS_2" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:350000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:350000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:30000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:250000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;B&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_PARAMETERS_3" value="{&quot;fp_type&quot;:&quot;SOIC_narrow&quot;,&quot;params&quot;:{&quot;N&quot;:{&quot;nom&quot;:&quot;8&quot;,&quot;long name&quot;:&quot;Number of leads&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;N&quot;,&quot;type&quot;:&quot;count&quot;},&quot;A&quot;:{&quot;nom&quot;:1600000,&quot;long name&quot;:&quot;Height&quot;,&quot;min&quot;:1500000,&quot;max&quot;:1700000,&quot;short name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A1&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Package clearance&quot;,&quot;min&quot;:100000,&quot;max&quot;:200000,&quot;short name&quot;:&quot;A1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;A2&quot;:{&quot;nom&quot;:1450000,&quot;long name&quot;:&quot;Package height&quot;,&quot;min&quot;:1400000,&quot;max&quot;:1500000,&quot;short name&quot;:&quot;A2&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;D&quot;:{&quot;nom&quot;:4900000,&quot;long name&quot;:&quot;Package length&quot;,&quot;min&quot;:4850000,&quot;max&quot;:4950000,&quot;short name&quot;:&quot;D&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E&quot;:{&quot;nom&quot;:6000000,&quot;long name&quot;:&quot;Width w/ leads&quot;,&quot;min&quot;:5900000,&quot;max&quot;:6100000,&quot;short name&quot;:&quot;E&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;E1&quot;:{&quot;nom&quot;:3900000,&quot;long name&quot;:&quot;Package width&quot;,&quot;min&quot;:3850000,&quot;max&quot;:3950000,&quot;short name&quot;:&quot;E1&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;B&quot;:{&quot;nom&quot;:400000,&quot;long name&quot;:&quot;Lead width&quot;,&quot;min&quot;:300000,&quot;max&quot;:500000,&quot;short name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;C&quot;:{&quot;nom&quot;:200000,&quot;long name&quot;:&quot;Lead thickness&quot;,&quot;min&quot;:150000,&quot;max&quot;:250000,&quot;short name&quot;:&quot;C&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;e&quot;:{&quot;nom&quot;:1270000,&quot;long name&quot;:&quot;Lead pitch&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;e&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;L&quot;:{&quot;nom&quot;:720000,&quot;long name&quot;:&quot;Lead foot length&quot;,&quot;min&quot;:620000,&quot;max&quot;:820000,&quot;short name&quot;:&quot;L&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;PHI&quot;:{&quot;nom&quot;:4000000,&quot;long name&quot;:&quot;Lead foot angle&quot;,&quot;min&quot;:1000000,&quot;max&quot;:7000000,&quot;short name&quot;:&quot;PHI&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;HT&quot;:{&quot;default&quot;:&quot;No&quot;,&quot;long name&quot;:&quot;Thermal pad&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;HT&quot;,&quot;children&quot;:[]},&quot;offset x&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;X Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset x&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;offset y&quot;:{&quot;nom&quot;:0,&quot;long name&quot;:&quot;Y Center offset&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;offset y&quot;,&quot;type&quot;:&quot;measurement&quot;},&quot;LS&quot;:{&quot;default&quot;:&quot;Rounded rectangle&quot;,&quot;long name&quot;:&quot;Land shape&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS&quot;},&quot;LS1&quot;:{&quot;default&quot;:&quot;Rectangle&quot;,&quot;long name&quot;:&quot;Land shape (Pin 1)&quot;,&quot;type&quot;:&quot;multichoice&quot;,&quot;short name&quot;:&quot;LS1&quot;},&quot;solder toe&quot;:{&quot;nom&quot;:150000,&quot;long name&quot;:&quot;Solder fillet (toe)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder toe&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder heel&quot;:{&quot;nom&quot;:250000,&quot;long name&quot;:&quot;Solder fillet (heel)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder heel&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;solder side&quot;:{&quot;nom&quot;:10000,&quot;long name&quot;:&quot;Solder fillet (side)&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;solder side&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;courtyard&quot;:{&quot;nom&quot;:100000,&quot;long name&quot;:&quot;Courtyard&quot;,&quot;min&quot;:null,&quot;max&quot;:null,&quot;short name&quot;:&quot;courtyard&quot;,&quot;type&quot;:&quot;fixedmeasurement&quot;},&quot;SF&quot;:{&quot;default&quot;:&quot;C&quot;,&quot;long name&quot;:&quot;Packing level&quot;,&quot;type&quot;:&quot;multichoiceparent&quot;,&quot;short name&quot;:&quot;SF&quot;,&quot;help&quot;:&quot;http://support.upverter.com/customer/portal/articles/978783-what-is-a-footprint-packing-level&quot;,&quot;children&quot;:[&quot;solder toe&quot;,&quot;solder heel&quot;,&quot;solder side&quot;,&quot;courtyard&quot;]}}}"/>
+<attribute name="FOOTPRINT_URL" value="https://www.diodes.com/assets/Package-Files/SO-8.pdf"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_0" value="Recommended_Land_Pattern"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_1" value="IPC_A"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_2" value="IPC_B"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_3" value="IPC_C"/>
+<attribute name="HEIGHT" value="1.7mm"/>
+<attribute name="IPC_LAND_PATTERN_NAME" value="SOIC127P600X160-8"/>
+<attribute name="LEAD_FREE" value="Yes"/>
+<attribute name="MAX_JUNCTION_TEMP" value="+150°C"/>
+<attribute name="MAX_POWER_DISSIPATION" value="780mW"/>
+<attribute name="MAX_SUPPLY_VOLTAGE" value="36V"/>
+<attribute name="MF" value="Diodes Inc."/>
+<attribute name="MFG_PACKAGE_IDENT" value="SO-8"/>
+<attribute name="MFG_PACKAGE_IDENT_COMPONENT_ID" value="5582ebb69da50281"/>
+<attribute name="MFG_PACKAGE_IDENT_DATE" value="03/2017"/>
+<attribute name="MFG_PACKAGE_IDENT_REV" value="0"/>
+<attribute name="MIN_SUPPLY_VOLTAGE" value="3V"/>
+<attribute name="MOUSER_DESCRIPTION" value="Voltage Regulators - Switching Regulators 1.5A Step-Down/Up 3.0V to 36V 180kHz"/>
+<attribute name="MOUSER_PART_NUMBER" value="621-AZ34063UMTR-G1"/>
+<attribute name="MPN" value="AZ34063UMTR-G1"/>
+<attribute name="NOMINAL_SUPPLY_CURRENT" value="4mA"/>
+<attribute name="NUMBER_OF_OUTPUTS" value="1"/>
+<attribute name="OUTPUT_CURRENT" value="1.5A"/>
+<attribute name="OUTPUT_TYPE" value="AdjustableProgrammable"/>
+<attribute name="OUTPUT_VOLTAGE" value="1.25-36V"/>
+<attribute name="PACKAGE" value="SOIC8"/>
+<attribute name="PREFIX" value="U"/>
+<attribute name="ROHS" value="Yes"/>
+<attribute name="STANDOFF_HEIGHT" value="0.1mm"/>
+<attribute name="SWITCHING_FREQUENCY" value="38kHz"/>
+<attribute name="SWITCHING_TOPOLOGY" value="Buck-Boost"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+85°C"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-40°C"/>
+<attribute name="VERIFICATION_VERSION" value="0.0.0.3"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
 </eagle>
