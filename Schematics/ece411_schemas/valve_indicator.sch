@@ -14827,9 +14827,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 </pinmapping>
 </spice>
 <attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="2616-RXW101M1HBK-0811S1-ND"/>
-<attribute name="MFR" value="SURGE"/>
-<attribute name="MPN" value="RXW101M1HBK-0811S"/>
+<attribute name="DPN" value="1572-1044-ND"/>
+<attribute name="MFR" value="Illinois Capacitor"/>
+<attribute name="MPN" value="107CKR050M"/>
 </part>
 <part name="C1_H" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="100uF">
 <spice>
@@ -14839,9 +14839,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 </pinmapping>
 </spice>
 <attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="2616-RXW101M1HBK-0811S1-ND"/>
-<attribute name="MFR" value="SURGE"/>
-<attribute name="MPN" value="RXW101M1HBK-0811S"/>
+<attribute name="DPN" value="1572-1044-ND"/>
+<attribute name="MFR" value="Illinois Capacitor"/>
+<attribute name="MPN" value="107CKR050M"/>
 </part>
 </parts>
 <sheets>
