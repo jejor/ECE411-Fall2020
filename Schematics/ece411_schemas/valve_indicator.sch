@@ -14936,6 +14936,10 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <attribute name="MFR" value="Illinois Capacitor"/>
 <attribute name="MPN" value="107CKR050M"/>
 </part>
+<part name="C0_L" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="10uF"/>
+<part name="C0_H" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="10uF"/>
+<part name="GND41" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND42" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16157,6 +16161,20 @@ POE+ 24V to 10V</text>
 <attribute name="MPN" x="121.92" y="109.22" size="1.778" layer="96" display="off"/>
 <attribute name="MFR" x="121.92" y="109.22" size="1.778" layer="96" display="off"/>
 </instance>
+<instance part="C0_L" gate="G$1" x="132.08" y="208.28" smashed="yes">
+<attribute name="NAME" x="133.096" y="208.915" size="1.778" layer="95"/>
+<attribute name="VALUE" x="133.096" y="204.089" size="1.778" layer="96"/>
+</instance>
+<instance part="C0_H" gate="G$1" x="132.08" y="109.22" smashed="yes">
+<attribute name="NAME" x="133.096" y="109.855" size="1.778" layer="95"/>
+<attribute name="VALUE" x="133.096" y="105.029" size="1.778" layer="96"/>
+</instance>
+<instance part="GND41" gate="1" x="132.08" y="99.06" smashed="yes">
+<attribute name="VALUE" x="129.54" y="96.52" size="1.778" layer="96"/>
+</instance>
+<instance part="GND42" gate="1" x="132.08" y="198.12" smashed="yes">
+<attribute name="VALUE" x="129.54" y="195.58" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -16231,6 +16249,16 @@ POE+ 24V to 10V</text>
 <wire x1="233.68" y1="223.52" x2="233.68" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="228.6" x2="238.76" y2="228.6" width="0.1524" layer="91"/>
 <pinref part="R2_L" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="C0_H" gate="G$1" pin="2"/>
+<wire x1="132.08" y1="104.14" x2="132.08" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="GND41" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND42" gate="1" pin="GND"/>
+<pinref part="C0_L" gate="G$1" pin="2"/>
+<wire x1="132.08" y1="200.66" x2="132.08" y2="203.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -16360,7 +16388,8 @@ POE+ 24V to 10V</text>
 <net name="N$1" class="0">
 <segment>
 <pinref part="U2" gate="G$0" pin="VCC"/>
-<wire x1="121.92" y1="114.3" x2="149.86" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="114.3" x2="132.08" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="114.3" x2="149.86" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="111.76" x2="121.92" y2="114.3" width="0.1524" layer="91"/>
 <junction x="121.92" y="114.3"/>
 <wire x1="121.92" y1="114.3" x2="121.92" y2="124.46" width="0.1524" layer="91"/>
@@ -16370,7 +16399,8 @@ POE+ 24V to 10V</text>
 <wire x1="99.06" y1="198.12" x2="109.22" y2="198.12" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$0" pin="VCC"/>
 <wire x1="109.22" y1="213.36" x2="121.92" y2="213.36" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="213.36" x2="149.86" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="213.36" x2="132.08" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="213.36" x2="149.86" y2="213.36" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="210.82" x2="121.92" y2="213.36" width="0.1524" layer="91"/>
 <junction x="121.92" y="213.36"/>
 <wire x1="121.92" y1="213.36" x2="121.92" y2="223.52" width="0.1524" layer="91"/>
@@ -16383,6 +16413,12 @@ POE+ 24V to 10V</text>
 <pinref part="RS_L" gate="G$1" pin="1"/>
 <pinref part="C1_L" gate="G$1" pin="1"/>
 <pinref part="C1_H" gate="G$1" pin="1"/>
+<pinref part="C0_H" gate="G$1" pin="1"/>
+<wire x1="132.08" y1="111.76" x2="132.08" y2="114.3" width="0.1524" layer="91"/>
+<junction x="132.08" y="114.3"/>
+<pinref part="C0_L" gate="G$1" pin="1"/>
+<wire x1="132.08" y1="210.82" x2="132.08" y2="213.36" width="0.1524" layer="91"/>
+<junction x="132.08" y="213.36"/>
 </segment>
 </net>
 </nets>

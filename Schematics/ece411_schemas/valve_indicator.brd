@@ -1619,6 +1619,22 @@ type 0204, grid 5 mm</description>
 <rectangle x1="-2.032" y1="-0.254" x2="-1.778" y2="0.254" layer="51"/>
 <rectangle x1="1.778" y1="-0.254" x2="2.032" y2="0.254" layer="51"/>
 </package>
+<package name="C1206" urn="urn:adsk.eagle:footprint:23125/1" library_version="11">
+<description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
+<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-0.965" y1="0.787" x2="0.965" y2="0.787" width="0.1016" layer="51"/>
+<wire x1="-0.965" y1="-0.787" x2="0.965" y2="-0.787" width="0.1016" layer="51"/>
+<smd name="1" x="-1.4" y="0" dx="1.6" dy="1.8" layer="1"/>
+<smd name="2" x="1.4" y="0" dx="1.6" dy="1.8" layer="1"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.7018" y1="-0.8509" x2="-0.9517" y2="0.8491" layer="51"/>
+<rectangle x1="0.9517" y1="-0.8491" x2="1.7018" y2="0.8509" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="C0603" urn="urn:adsk.eagle:package:23616/2" type="model" library_version="11">
@@ -1645,6 +1661,12 @@ grid 2.5 mm, outline 2.5 x 5 mm</description>
 type 0204, grid 5 mm</description>
 <packageinstances>
 <packageinstance name="0204/5"/>
+</packageinstances>
+</package3d>
+<package3d name="C1206" urn="urn:adsk.eagle:package:23618/2" type="model" library_version="11">
+<description>CAPACITOR</description>
+<packageinstances>
+<packageinstance name="C1206"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -2156,7 +2178,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="MOUSER_DESCRIPTION" value="Voltage Regulators - Switching Regulators 1.5A Step-Down/Up 3.0V to 36V 180kHz" x="-13.335" y="38.1" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MOUSER_PART_NUMBER" value="621-AZ34063UMTR-G1" x="-13.335" y="38.1" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="AZ34063UMTR-G1" x="-13.335" y="38.1" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="34.995" y="31.515" size="1" layer="25" rot="R180"/>
+<attribute name="NAME" x="35.63" y="37.865" size="0.8128" layer="25" rot="R180"/>
 <attribute name="NOMINAL_SUPPLY_CURRENT" value="4mA" x="-13.335" y="38.1" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NUMBER_OF_OUTPUTS" value="1" x="-13.335" y="38.1" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OUTPUT_CURRENT" value="1.5A" x="-13.335" y="38.1" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2206,7 +2228,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="MOUSER_DESCRIPTION" value="Voltage Regulators - Switching Regulators 1.5A Step-Down/Up 3.0V to 36V 180kHz" x="51.435" y="22.86" size="1.778" layer="27" display="off"/>
 <attribute name="MOUSER_PART_NUMBER" value="621-AZ34063UMTR-G1" x="51.435" y="22.86" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="AZ34063UMTR-G1" x="51.435" y="22.86" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="33.585" y="43.415" size="1" layer="25"/>
+<attribute name="NAME" x="34.22" y="43.415" size="0.8128" layer="25"/>
 <attribute name="NOMINAL_SUPPLY_CURRENT" value="4mA" x="51.435" y="22.86" size="1.778" layer="27" display="off"/>
 <attribute name="NUMBER_OF_OUTPUTS" value="1" x="51.435" y="22.86" size="1.778" layer="27" display="off"/>
 <attribute name="OUTPUT_CURRENT" value="1.5A" x="51.435" y="22.86" size="1.778" layer="27" display="off"/>
@@ -2557,6 +2579,16 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="POPULARITY" value="0" x="40.005" y="45.085" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="40.005" y="45.085" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
+<element name="C0_L" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="10uF" x="34.29" y="45.72" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.02" y="46.99" size="0.8128" layer="25"/>
+<attribute name="POPULARITY" value="24" x="34.29" y="45.72" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="34.29" y="45.72" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C0_H" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="10uF" x="28.575" y="36.83" smashed="yes" rot="R90">
+<attribute name="NAME" x="29.845" y="38.1" size="0.8128" layer="25" rot="R270"/>
+<attribute name="POPULARITY" value="24" x="28.575" y="36.83" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="28.575" y="36.83" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -2698,7 +2730,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="8.255" y="45.085" extent="1-16" drill="0.35"/>
 <via x="14.605" y="45.085" extent="1-16" drill="0.35"/>
 <via x="20.955" y="45.085" extent="1-16" drill="0.35"/>
-<via x="36.195" y="46.355" extent="1-16" drill="0.35"/>
+<via x="36.195" y="43.815" extent="1-16" drill="0.35"/>
 <via x="47.625" y="46.355" extent="1-16" drill="0.35"/>
 <via x="62.865" y="29.845" extent="1-16" drill="0.35"/>
 <via x="79.375" y="7.62" extent="1-16" drill="0.35"/>
@@ -2709,6 +2741,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="3.81" y="24.765" extent="1-16" drill="0.35"/>
 <via x="3.81" y="31.75" extent="1-16" drill="0.35"/>
 <via x="3.81" y="38.735" extent="1-16" drill="0.35"/>
+<contactref element="C0_H" pad="2"/>
+<contactref element="C0_L" pad="2"/>
 </signal>
 <signal name="N$6">
 <contactref element="HES1" pad="3"/>
@@ -3125,11 +3159,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </signal>
 <signal name="N$4">
 <contactref element="U1" pad="5"/>
-<wire x1="32.427" y1="36.195" x2="27.94" y2="36.195" width="0.3048" layer="1"/>
+<wire x1="32.427" y1="36.195" x2="30.48" y2="36.195" width="0.3048" layer="1"/>
 <contactref element="R1_L" pad="1"/>
 <contactref element="R2_L" pad="2"/>
-<wire x1="27.09" y1="37.045" x2="24.765" y2="37.045" width="0.3048" layer="1"/>
-<wire x1="27.94" y1="36.195" x2="27.09" y2="37.045" width="0.3048" layer="1"/>
+<wire x1="29.63" y1="37.045" x2="24.765" y2="37.045" width="0.3048" layer="1"/>
+<wire x1="30.48" y1="36.195" x2="29.63" y2="37.045" width="0.3048" layer="1"/>
 <wire x1="24.765" y1="37.045" x2="24.765" y2="39.155" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$5">
@@ -3183,12 +3217,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="68.89" y1="34.925" x2="68.89" y2="36.52" width="0.3048" layer="1"/>
 <wire x1="68.89" y1="36.52" x2="65.715" y2="39.695" width="0.3048" layer="1"/>
 <wire x1="56.825" y1="39.695" x2="65.715" y2="39.695" width="0.3048" layer="1"/>
-<wire x1="30.48" y1="41.91" x2="30.48" y2="43.307" width="0.3048" layer="1"/>
-<wire x1="30.48" y1="43.307" x2="34.2265" y2="47.0535" width="0.3048" layer="1"/>
+<wire x1="30.48" y1="41.91" x2="30.48" y2="45.847" width="0.3048" layer="1"/>
+<wire x1="30.48" y1="45.847" x2="32.3215" y2="47.6885" width="0.3048" layer="1"/>
 <wire x1="51.435" y1="44.45" x2="52.07" y2="44.45" width="0.3048" layer="1"/>
 <wire x1="52.07" y1="44.45" x2="56.825" y2="39.695" width="0.3048" layer="1"/>
-<wire x1="48.8315" y1="47.0535" x2="51.435" y2="44.45" width="0.3048" layer="1"/>
-<wire x1="34.2265" y1="47.0535" x2="48.8315" y2="47.0535" width="0.3048" layer="1"/>
+<wire x1="48.1965" y1="47.6885" x2="51.435" y2="44.45" width="0.3048" layer="1"/>
+<wire x1="32.3215" y1="47.6885" x2="48.1965" y2="47.6885" width="0.3048" layer="1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="L2" pad="2"/>
@@ -3251,8 +3285,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="32.427" y1="34.925" x2="33.655" y2="34.925" width="0.6096" layer="1"/>
 <wire x1="33.655" y1="34.925" x2="34.29" y2="35.56" width="0.6096" layer="1"/>
 <wire x1="34.29" y1="35.56" x2="34.29" y2="37.465" width="0.6096" layer="1"/>
-<wire x1="24.172" y1="33.655" x2="29.845" y2="33.655" width="0.6096" layer="1"/>
+<wire x1="24.172" y1="33.655" x2="28.575" y2="33.655" width="0.6096" layer="1"/>
 <contactref element="RS_L" pad="1"/>
+<wire x1="28.575" y1="33.655" x2="29.845" y2="33.655" width="0.6096" layer="1"/>
 <wire x1="32.385" y1="29.845" x2="35.98" y2="29.845" width="0.6096" layer="1"/>
 <contactref element="C1_L" pad="1"/>
 <wire x1="41.49" y1="41.91" x2="42.545" y2="41.91" width="0.6096" layer="1"/>
@@ -3265,6 +3300,14 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="29.845" y1="32.385" x2="32.385" y2="29.845" width="0.6096" layer="1"/>
 <wire x1="41.275" y1="45.085" x2="41.49" y2="44.87" width="0.6096" layer="1"/>
 <wire x1="41.49" y1="44.87" x2="41.49" y2="41.91" width="0.6096" layer="1"/>
+<contactref element="C0_H" pad="1"/>
+<contactref element="C0_L" pad="1"/>
+<wire x1="28.575" y1="35.43" x2="28.575" y2="33.655" width="0.6096" layer="1"/>
+<wire x1="35.69" y1="45.72" x2="37.465" y2="45.72" width="0.6096" layer="1"/>
+<wire x1="37.465" y1="45.72" x2="38.1" y2="46.355" width="0.6096" layer="1"/>
+<wire x1="38.1" y1="46.355" x2="40.64" y2="46.355" width="0.6096" layer="1"/>
+<wire x1="40.64" y1="46.355" x2="41.275" y2="45.72" width="0.6096" layer="1"/>
+<wire x1="41.275" y1="45.72" x2="41.275" y2="45.085" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$39">
 <contactref element="T4" pad="C"/>
