@@ -6,7 +6,7 @@
 "2";"10uF";"C-USC1206";"C1206";"C0_H, C0_L";"CAPACITOR, American symbol";"Digi-Key";"1276-6736-1-ND";"Samsung Electro-Mechanics";"CL31A106MBHNNNE";"24";"C";
 "2";"1N5819G_0_0";"ON_SEMICONDUCTOR_1N5819GON_SEMICONDUCTOR_1N5819G_0_0";"ON_SEMICONDUCTOR_1N5819G_0";"D1, D2";"ONSC-D-K1A2-2_A";"Digi-Key";"1N5819GOS-ND";"On Semiconductor";"1N5819G";"";"";
 "1";"2.2k";"R-US_R0603";"R0603";"R2_L";"RESISTOR, American symbol";"Digi-Key";"P2.20KHCT-ND";"Panasonic Electronic Components";"ERJ-3EKF2201V";"77";"R";
-"2";"220uH";"L-US0204/5";"0204/5";"L1, L2";"INDUCTOR, American symbol";"Digi-Key";"AIUR-06-221K-ND";"Abracon LLC";"AIUR-06-221K";"0";"L";
+"2";"220uH";"L-US0204/5";"0204/5";"L1, L2";"INDUCTOR, American symbol";"Mouser";"994-RFS1317-224KL";"Coilcraft";"RFS1317-224KL";"0";"L";
 "1";"24V";"DCBARRELSMT";"DCJACK_2MM_SMT";"POE_IN";"2.0mm DC Barrel Jack";"";"";"";"";"";"";
 "4";"2N2222";"-NPN-SOT23-EBC";"SOT23-EBC";"T1, T2, T3, T4";"NPN Transistror";"Digi-Key";"1727-2956-1-ND";"Nexperia USA Inc.";"PMBT2222A,215";"0";"";
 "1";"3.3k";"R-US_R0603";"R0603";"R1_H";"RESISTOR, American symbol";"Digi-Key";"311-3.30KHRCT-ND";"Yageo";"RC0603FR-073K3L";"77";"R";
@@ -34,5 +34,6 @@
 "4";"NP";"R-US_R0603";"R0603";"R10, R11, R12, R13";"RESISTOR, American symbol";"";"";"";"";"77";"R";
 "1";"SB240";"1N5817-B";"DO41-7.6";"D3";"1.0A SCHOTTKY BARRIER RECTIFIER";"Digi-Key";"SB240-E3/54GICT-ND";"Vishay Semiconductor Diodes Division";"SB240-E3/54";"0";"";
 "1";"SD_CARD";"PINHD-1X8";"1X08";"SD_CARD";"PIN HEADER";"";"";"";"";"67";"";
-"1";"SM_STAT";"PINHD-1X3";"1X03";"SM_STAT";"PIN HEADER";"";"";"";"";"92";"";
+"1";"SM_STAT";"PINHD-1X2";"1X02";"SM_STAT";"PIN HEADER";"";"";"";"";"98";"";
 "1";"STM32F042K6";"STM32F042K6";"QFP32-7X7";"U3";"";"";"";"";"";"";"";
+"9";"TEST-POINT-LARGE-SQUARE";"TEST-POINT-LARGE-SQUARE";"1X01";"TP3V3, TP3V3J, TP10V, TPBASE, TPJGND, TPNRST, TPOE, TPSCLK, TPSIO";"";"";"";"";"";"";"";

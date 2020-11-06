@@ -14394,10 +14394,10 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="AIUR-06-221K-ND"/>
-<attribute name="MFR" value="Abracon LLC"/>
-<attribute name="MPN" value="AIUR-06-221K"/>
+<attribute name="DIS" value="Mouser"/>
+<attribute name="DPN" value="994-RFS1317-224KL"/>
+<attribute name="MFR" value="Coilcraft"/>
+<attribute name="MPN" value="RFS1317-224KL"/>
 </part>
 <part name="SM_STAT" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2" value="SM_STAT"/>
 <part name="U2" library="Diodes Inc. - AZ34063UMTR-G1" deviceset="DIODES_INC._AZ34063UMTR-G1" device="DIODES_INC._AZ34063UMTR-G1_0_0" value="AZ34063UMTR-G1"/>
@@ -14418,10 +14418,10 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="AIUR-06-221K-ND"/>
-<attribute name="MFR" value="Abracon LLC"/>
-<attribute name="MPN" value="AIUR-06-221K"/>
+<attribute name="DIS" value="Mouser"/>
+<attribute name="DPN" value="994-RFS1317-224KL"/>
+<attribute name="MFR" value="Coilcraft"/>
+<attribute name="MPN" value="RFS1317-224KL"/>
 </part>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
