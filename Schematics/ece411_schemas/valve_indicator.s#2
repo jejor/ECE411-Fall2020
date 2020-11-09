@@ -14394,12 +14394,10 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="DIS" value="DigiKey"/>
-<attribute name="DPN" value="811-2101-ND
-"/>
-<attribute name="MFR" value="Murata Power Solutions Inc.
-"/>
-<attribute name="MPN" value="12RS224C"/>
+<attribute name="DIS" value="Mouser"/>
+<attribute name="DPN" value="994-RFS1317-224KL"/>
+<attribute name="MFR" value="Coilcraft"/>
+<attribute name="MPN" value="RFS1317-224KL"/>
 </part>
 <part name="SM_STAT" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2" value="SM_STAT"/>
 <part name="U2" library="Diodes Inc. - AZ34063UMTR-G1" deviceset="DIODES_INC._AZ34063UMTR-G1" device="DIODES_INC._AZ34063UMTR-G1_0_0" value="AZ34063UMTR-G1"/>
@@ -14420,12 +14418,10 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="DIS" value="DigiKey"/>
-<attribute name="DPN" value="811-2101-ND
-"/>
-<attribute name="MFR" value="Murata Power Solutions Inc.
-"/>
-<attribute name="MPN" value="12RS224C"/>
+<attribute name="DIS" value="Mouser"/>
+<attribute name="DPN" value="994-RFS1317-224KL"/>
+<attribute name="MFR" value="Coilcraft"/>
+<attribute name="MPN" value="RFS1317-224KL"/>
 </part>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -16147,6 +16143,9 @@ From UART on AC Board</text>
 <text x="53.34" y="200.66" size="1.778" layer="97">POE Connector 
 24V, Up to 30W 
 Connector type could change</text>
+<text x="132.08" y="231.14" size="1.778" layer="97">Not 100% sure what R_SC is, 
+datasheet does not explain it. 
+I am guessing it is R_SHORTCIRCUIT</text>
 <text x="104.14" y="182.88" size="1.778" layer="97">Bypass caps and timing cap
 values are from datasheet's
 normal use suggestions.</text>
@@ -16159,11 +16158,14 @@ by the datasheet</text>
 <wire x1="340.36" y1="243.84" x2="340.36" y2="162.56" width="0.1524" layer="97" style="shortdash"/>
 <text x="50.8" y="236.22" size="2.54" layer="97">Regulator 1:
 POE+ 24V to 3.6V</text>
-<text x="292.1" y="218.44" size="1.778" layer="97">3V3 powers all Hall Effect Sensors (HES#)</text>
+<text x="292.1" y="218.44" size="1.778" layer="97">3V6 powers all Hall Effect Sensors (HES#)</text>
 <text x="50.8" y="231.14" size="1.778" layer="97">POE+ Power Supply to 3.6 Hall Effect Sensor Power</text>
 <text x="78.74" y="109.22" size="1.778" layer="97">POE Connector 
 24V, Up to 30W 
 Connector type could change</text>
+<text x="132.08" y="132.08" size="1.778" layer="97">Not 100% sure what R_SC is, 
+datasheet does not explain it. 
+I am guessing it is R_SHORTCIRCUIT</text>
 <text x="104.14" y="83.82" size="1.778" layer="97">Bypass caps and timing cap
 values are from datasheet's
 normal use suggestions.</text>
@@ -16188,10 +16190,6 @@ Safe to 40V reverse voltage. Forward voltage drop of 0.5v</text>
 <text x="287.02" y="205.74" size="1.778" layer="97">Test Point 3V3</text>
 <text x="287.02" y="106.68" size="1.778" layer="97">Test Point +10V</text>
 <text x="101.6" y="215.9" size="1.778" layer="97">Test Point POE</text>
-<text x="127" y="231.14" size="1.778" layer="96">RSC = Current Sensing Resistor.
-For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text>
-<text x="127" y="129.54" size="1.778" layer="96">RSC = Current Sensing Resistor.
-For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes">
