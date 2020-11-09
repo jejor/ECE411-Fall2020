@@ -14394,7 +14394,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="DIS" value="DigiKey"/>
+<attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="811-2101-ND
 "/>
 <attribute name="MFR" value="Murata Power Solutions Inc.
@@ -14420,7 +14420,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
 </pinmapping>
 </spice>
-<attribute name="DIS" value="DigiKey"/>
+<attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="811-2101-ND
 "/>
 <attribute name="MFR" value="Murata Power Solutions Inc.
