@@ -13121,6 +13121,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/1364806"&gt; Datashee
 <attribute name="MPN" value="5-103635-5"/>
 </part>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X4" device="" package3d_urn="urn:adsk.eagle:package:22461/2" value="LEDS"/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device="" value="10V"/>
 </parts>
 <sheets>
 <sheet>
@@ -13726,6 +13727,9 @@ From UART on AC Board</text>
 <attribute name="NAME" x="354.33" y="145.415" size="1.778" layer="95"/>
 <attribute name="VALUE" x="354.33" y="129.54" size="1.778" layer="96"/>
 </instance>
+<instance part="P+1" gate="1" x="365.76" y="157.48" smashed="yes">
+<attribute name="VALUE" x="363.22" y="152.4" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -14137,24 +14141,6 @@ From UART on AC Board</text>
 <pinref part="HES9" gate="A" pin="1"/>
 <wire x1="25.4" y1="60.96" x2="35.56" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="+12V"/>
-<wire x1="25.4" y1="60.96" x2="12.7" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="60.96" x2="12.7" y2="15.24" width="0.1524" layer="91"/>
-<junction x="25.4" y="60.96"/>
-<pinref part="JP1" gate="A" pin="8"/>
-<pinref part="JP1" gate="A" pin="6"/>
-<wire x1="365.76" y1="134.62" x2="365.76" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="4"/>
-<wire x1="365.76" y1="137.16" x2="365.76" y2="139.7" width="0.1524" layer="91"/>
-<junction x="365.76" y="137.16"/>
-<pinref part="JP1" gate="A" pin="2"/>
-<wire x1="365.76" y1="139.7" x2="365.76" y2="142.24" width="0.1524" layer="91"/>
-<junction x="365.76" y="139.7"/>
-<wire x1="12.7" y1="15.24" x2="231.14" y2="15.24" width="0.1524" layer="91"/>
-<junction x="365.76" y="134.62"/>
-<wire x1="373.38" y1="35.56" x2="231.14" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="35.56" x2="231.14" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="373.38" y1="35.56" x2="373.38" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="373.38" y1="134.62" x2="365.76" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="HES7" gate="A" pin="1"/>
@@ -14203,6 +14189,21 @@ From UART on AC Board</text>
 <wire x1="35.56" y1="182.88" x2="25.4" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="182.88" x2="25.4" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="1" pin="+12V"/>
+</segment>
+<segment>
+<pinref part="P+1" gate="1" pin="+12V"/>
+<pinref part="JP1" gate="A" pin="2"/>
+<pinref part="JP1" gate="A" pin="4"/>
+<pinref part="JP1" gate="A" pin="6"/>
+<pinref part="JP1" gate="A" pin="8"/>
+<wire x1="365.76" y1="134.62" x2="365.76" y2="137.16" width="0.1524" layer="91"/>
+<junction x="365.76" y="137.16"/>
+<wire x1="365.76" y1="137.16" x2="365.76" y2="139.7" width="0.1524" layer="91"/>
+<junction x="365.76" y="139.7"/>
+<wire x1="365.76" y1="139.7" x2="365.76" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="365.76" y1="142.24" x2="365.76" y2="154.94" width="0.1524" layer="91"/>
+<junction x="365.76" y="142.24"/>
+<label x="365.76" y="149.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -15031,6 +15032,7 @@ For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text
 <approved hash="102,1,25.4,139.7,+12V,+10V,,,,"/>
 <approved hash="102,1,25.4,154.94,+12V,+10V,,,,"/>
 <approved hash="102,1,25.4,170.18,+12V,+10V,,,,"/>
+<approved hash="102,1,365.76,154.94,+12V,+10V,,,,"/>
 <approved hash="102,2,312.42,111.76,+12V,+10V,,,,"/>
 <approved hash="104,2,149.86,213.36,U1,VCC,POE,,,"/>
 <approved hash="104,2,149.86,114.3,U2,VCC,POE,,,"/>
