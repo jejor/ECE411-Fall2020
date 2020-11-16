@@ -14479,9 +14479,9 @@ by the datasheet</text>
 <wire x1="48.26" y1="243.84" x2="340.36" y2="243.84" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="340.36" y1="243.84" x2="340.36" y2="162.56" width="0.1524" layer="97" style="shortdash"/>
 <text x="50.8" y="236.22" size="2.54" layer="97">Regulator 1:
-POE+ 24V to 3.6V</text>
+POE+ 24V to 3.3V</text>
 <text x="292.1" y="218.44" size="1.778" layer="97">3V3 powers all Hall Effect Sensors (HES#)</text>
-<text x="50.8" y="231.14" size="1.778" layer="97">POE+ Power Supply to 3.6 Hall Effect Sensor Power</text>
+<text x="50.8" y="231.14" size="1.778" layer="97">POE+ Power Supply to 3.3 Hall Effect Sensor Power</text>
 <text x="78.74" y="109.22" size="1.778" layer="97">POE Connector 
 24V, Up to 30W 
 Connector type could change</text>

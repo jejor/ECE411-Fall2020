@@ -199,6 +199,8 @@
 <text x="82.804" y="34.036" size="0.6096" layer="25" rot="R90">NEG</text>
 <text x="27.94" y="48.26" size="0.6096" layer="25">l&lt;-</text>
 <text x="59.309" y="6.223" size="0.8128" layer="25">3V3</text>
+<text x="9.652" y="2.159" size="0.8128" layer="25">ECE411, Fall 2020, Team 13</text>
+<text x="9.652" y="0.381" size="0.8128" layer="25">Jennifer Jordan, Seth Rorhbach, Tiffani Hartman-Shilts, Katie Loseke</text>
 </plain>
 <libraries>
 <library name="pinhead" urn="urn:adsk.eagle:library:325">
