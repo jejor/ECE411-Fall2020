@@ -31,11 +31,13 @@ This project can be adapted for a system with up to 9 inputs to display the powe
 #### The full system architecture for the Test Stand Automation & Regulation system with the Safety Bar sub-project (green circle):
 ![TSAR System Architecture Practicum](https://github.com/jejor/ECE411-Fall2020/blob/main/images/sysArch-Practicum.png?raw=true)
 
-#### Safety Bar Level 1 Block Diagram:
-![Level 1 Block Diagram](https://github.com/jejor/ECE411-Fall2020/blob/main/images/level1.png?raw=true)
+#### Safety Bar Level 0 Block Diagram:
+![Level 0 Block Diagram](https://github.com/jejor/ECE411-Fall2020/blob/main/images/level0.png?raw=true)
 
-#### Safety Bar Level 2 Block Diagram:
-![Level 2 Block Diagram](https://github.com/jejor/ECE411-Fall2020/blob/main/images/level2.png?raw=true)
+#### Safety Bar Level 1 Block Diagram:
+![Level 2 Block Diagram](https://github.com/jejor/ECE411-Fall2020/blob/main/images/level1.png?raw=true)
+
+![Level 2 Block Diagram](https://github.com/jejor/ECE411-Fall2020/blob/main/images/level1annotated .png?raw=true)
 
 ## Design Specification
 
