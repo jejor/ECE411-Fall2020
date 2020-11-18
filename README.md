@@ -37,7 +37,7 @@ This project can be adapted for a system with up to 9 inputs to display the powe
 #### Safety Bar Level 1 Block Diagram:
 ![Level 2 Block Diagram](https://github.com/jejor/ECE411-Fall2020/blob/main/images/level1.png?raw=true)
 
-![Level 2 Block Diagram](https://github.com/jejor/ECE411-Fall2020/blob/main/images/level1annotated .png?raw=true)
+![Level 2 Block Diagram](https://github.com/jejor/ECE411-Fall2020/blob/main/images/level1annotated.png?raw=true)
 
 ## Design Specification
 
