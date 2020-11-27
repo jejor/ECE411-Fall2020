@@ -180,7 +180,6 @@ int isError(int valvesInError[], int errorLevel)
 		powerFailureState();  //It is currently not expected that we can return from this state without a restart
 		return 1;
 	}
-	//add a loss of power error with higher priority later
 	
   int i = 0;
 	for(i=0; i<6; ++i)
@@ -200,7 +199,8 @@ int isError(int valvesInError[], int errorLevel)
 			ledOff();
 		}
 	}
- return 0;
+	LedOn(errorLevel);
+	return 0;
 }
 
 /*
@@ -255,6 +255,39 @@ void ledOn(int whichOn)
 	//printf for debugging outside of board
 	//will comment out in board testing
 	printf("LED %d ON\n", whichOn);
+	if(whichOn==7)
+	{
+		//turn on LED3
+		//turn on LED2
+		//turn on LED1
+	}
+	if(whichOn==6)
+	{
+		//turn on LED3
+		//turn on LED2
+	}
+	if(whichOn==5)
+	{
+		//turn on LED3
+		//turn on LED1
+	}
+	if(whichOn==4)
+	{
+		//turn on LED3
+	}
+	if(whichOn==3)
+	{
+		//turn on LED2
+		//turn on LED1
+	}
+	if(whichOn==2)
+	{
+		//turn on LED2
+	}
+	if(whichOn==1)
+	{
+		//turn on LED1
+	}
 }
 
 void ledOff()
