@@ -13066,7 +13066,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/1364806"&gt; Datashee
 <attribute name="MFR" value="Walsin Technology Corporation"/>
 <attribute name="MPN" value="0603B471K500CT"/>
 </part>
-<part name="C3_L" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="470uF">
+<part name="C3_L" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="470uF">
 <spice>
 <pinmapping spiceprefix="C">
 <pinmap gate="G$1" pin="1" pinorder="1"/>
@@ -13078,7 +13078,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/1364806"&gt; Datashee
 <attribute name="MFR" value="KEMET"/>
 <attribute name="MPN" value="ESH477M050AH4AA"/>
 </part>
-<part name="C3_H" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="470uF">
+<part name="C3_H" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="470uF">
 <spice>
 <pinmapping spiceprefix="C">
 <pinmap gate="G$1" pin="1" pinorder="1"/>
