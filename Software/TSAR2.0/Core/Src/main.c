@@ -60,10 +60,10 @@ static void MX_USART1_UART_Init(void);
 
 /* USER CODE BEGIN PFP */
 
-//void myprintf(const char *fmt, ...);
 // Begin Katie's PFP
 
 int mainCheck(int valveCState[], int valveExState[], int batteryState);
+
 //this is the main for this part that will call all other functions
 //Will return 0 if no errors were found
 int checkState(int valveCState[], int valveExState[], int valvesInError[]);	//input is a placeholder as I don't know how we get valve info into function
@@ -102,15 +102,7 @@ void powerFailureState();
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-//void myprintf(const char *fmt, ...) {
-//static char buffer[256];
-//va_list args;
-//va_start(args, fmt);
-//vsnprintf(buffer, sizeof(buffer), fmt, args);
-//va_end(args);
-//int len = strlen(buffer);
-//HAL_UART_Transmit(&huart2, (uint8_t*)buffer, len, -1);
-//}
+
 /* USER CODE END 0 */
 
 /**
@@ -124,6 +116,12 @@ int main(void) {
 
 	int sensorState[10];
 
+	int errorStatus;
+
+	char writeBuffer[10];
+
+	unsigned int bytesWritten;
+
 	/* USER CODE END 1 */
 
 	/* MCU Configuration--------------------------------------------------------*/
@@ -132,9 +130,9 @@ int main(void) {
 	HAL_Init();
 
 	/* USER CODE BEGIN Init */
+
 	int safetyState[] = {0, 0, 1, 1, 1, 1, 1, 1, 1};
-	int errorStatus;
-	char writeBuffer[10];
+
 	/* USER CODE END Init */
 
 	/* Configure the system clock */
@@ -157,25 +155,6 @@ int main(void) {
 	//some variables for FatFs
 	FATFS FatFs; 	//Fatfs handle
 	FIL fil; 		//File handle
-
-	//Open the file system
-	f_mount(&FatFs, "", 1); // 1=mount now
-
-
-	//Now let's try and write a file "write.txt"
-	f_open(&fil, "valveStateData.txt",
-			FA_WRITE | FA_OPEN_ALWAYS | FA_CREATE_ALWAYS);
-
-	//Copy in a string
-	//strncpy((char*) readBuf, "a new file is made!", 19);
-	UINT bytesWrote;
-	//f_write(&fil, readBuf, 19, &bytesWrote);
-
-	//Be a tidy kiwi - don't forget to close your file!
-	f_close(&fil);
-
-	//We're done, so de-mount the drive
-	f_mount(NULL, "", 0);
 
 	/* USER CODE END 2 */
 
@@ -209,14 +188,26 @@ int main(void) {
 			writeBuffer[i] = (char)(sensorState[i] + 48);
 		}
 
+		//Open the file system
+		f_mount(&FatFs, "", 1); // 1=mount now
+
+
+		//Now let's try and write a file "write.txt"
+		f_open(&fil, "valveStateData.txt",
+				FA_WRITE | FA_OPEN_ALWAYS | FA_CREATE_ALWAYS);
+
+		f_write(&fil, writeBuffer, sizeof(writeBuffer), &bytesWritten);
+
+		//Be a tidy kiwi - don't forget to close your file!
+		f_close(&fil);
+
+		//We're done, so de-mount the drive
+		f_mount(NULL, "", 0);
 		// End Tiffani's main program
 
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
-		//Blink the LED every second
-		// HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-		//HAL_Delay(1000);
 	}
 	/* USER CODE END 3 */
 }
