@@ -132,7 +132,9 @@ int main(void) {
 	HAL_Init();
 
 	/* USER CODE BEGIN Init */
-
+	int safetyState[] = {0, 0, 1, 1, 1, 1, 1, 1, 1};
+	int errorStatus;
+	char writeBuffer[10];
 	/* USER CODE END Init */
 
 	/* Configure the system clock */
@@ -150,79 +152,24 @@ int main(void) {
 
 	/* USER CODE BEGIN 2 */
 
-	// myprintf("\r\n~ SD card demo by kiwih ~\r\n\r\n");
 	HAL_Delay(1000); //a short delay is important to let the SD card settle
 
 	//some variables for FatFs
 	FATFS FatFs; 	//Fatfs handle
 	FIL fil; 		//File handle
-	//FRESULT fres; //Result after operations
 
 	//Open the file system
 	f_mount(&FatFs, "", 1); // 1=mount now
-	// if (fres != FR_OK) {
-	// myprintf("f_mount error (%i)\r\n", fres);
-	// while(1);
-	//}
 
-	//Let's get some statistics from the SD card
-	// DWORD free_clusters;
-
-	//FATFS* getFreeFs;
-
-	//fres = f_getfree("", &free_clusters, &getFreeFs);
-	//if (fres != FR_OK) {
-	//myprintf("f_getfree error (%i)\r\n", fres);
-	//while(1);
-	//}
-
-	//Formula comes from ChaN's documentation
-	//total_sectors = (getFreeFs->n_fatent - 2) * getFreeFs->csize;
-	//free_sectors = free_clusters * getFreeFs->csize;
-
-	//myprintf("SD card stats:\r\n%10lu KiB total drive space.\r\n%10lu KiB available.\r\n", total_sectors / 2, free_sectors / 2);
-
-	//Now let's try to open file "test.txt"
-	//fres = f_open(&fil, "test.txt", FA_READ);
-	// if (fres != FR_OK) {
-	// myprintf("f_open error (%i)\r\n");
-	//while(1);
-	//}
-	//myprintf("I was able to open 'test.txt' for reading!\r\n");
-
-	//Read 30 bytes from "test.txt" on the SD card
-	BYTE readBuf[30];
-
-	//We can either use f_read OR f_gets to get data out of files
-	//f_gets is a wrapper on f_read that does some string formatting for us
-	//TCHAR* rres = f_gets((TCHAR*)readBuf, 30, &fil);
-	//if(rres != 0) {
-	//myprintf("Read string from 'test.txt' contents: %s\r\n", readBuf);
-	//} else {
-	//myprintf("f_gets error (%i)\r\n", fres);
-	//}
-
-	//Be a tidy kiwi - don't forget to close your file!
-	//f_close(&fil);
 
 	//Now let's try and write a file "write.txt"
 	f_open(&fil, "valveStateData.txt",
 			FA_WRITE | FA_OPEN_ALWAYS | FA_CREATE_ALWAYS);
-	//if(fres == FR_OK) {
-	//myprintf("I was able to open 'write.txt' for writing\r\n");
-	//} else {
-	//myprintf("f_open error (%i)\r\n", fres);
-	//}
 
 	//Copy in a string
-	strncpy((char*) readBuf, "a new file is made!", 19);
+	//strncpy((char*) readBuf, "a new file is made!", 19);
 	UINT bytesWrote;
-	f_write(&fil, readBuf, 19, &bytesWrote);
-	//if(fres == FR_OK) {
-	//myprintf("Wrote %i bytes to 'write.txt'!\r\n", bytesWrote);
-	//} else {
-	//myprintf("f_write error (%i)\r\n");
-	//}
+	//f_write(&fil, readBuf, 19, &bytesWrote);
 
 	//Be a tidy kiwi - don't forget to close your file!
 	f_close(&fil);
@@ -255,7 +202,12 @@ int main(void) {
 
 		sensorState[8] = HAL_GPIO_ReadPin(GPIOA, Hall_Effect_Sensor_Nine_Pin);
 
+		errorStatus = mainCheck(sensorState, safetyState, 0);
 
+		for (int i = 0; i<9; i++)
+		{
+			writeBuffer[i] = (char)(sensorState[i] + 48);
+		}
 
 		// End Tiffani's main program
 
@@ -437,14 +389,14 @@ int mainCheck(int valveCState[], int valveExState[], int batteryState)
 	//For tracking error status, only says that we have an error
 	int errorButton = 0;
 
-	//Keeps trak of which state of error that we are in
+	//Keeps track of which state of error that we are in
 	//0 = all good, 1 = minor error, 2 = bigger error, 3 = major error, 4 = power failure
 	int errorState = 0;
 
 	//array keeps track of which valves are in error
 	int valvesInError[10]; //0 = good, 1 = error
 
-	//initialising error array
+	//initializing error array
 	//10th index is for power
 	int i = 0;
 	for (i=0; i<9; ++i)
@@ -460,7 +412,7 @@ int mainCheck(int valveCState[], int valveExState[], int batteryState)
 			errorState = errorFound(valvesInError);
 			isError(valvesInError, errorState);
 		}
-		//clear any errors that may have been occuring
+		//clear any errors that may have been occurring
 		if(errorButton == 0)
 		{
 			buzzOff();
@@ -534,7 +486,7 @@ int errorFound(int valvesInError[]) {
 // PV_LF01		//8 - 7
 // PV_P01		//6 - 8
 // PV_P02		//7 - 9
-//Error level is set to highest prio valve
+//Error level is set to highest prior valve
 	if (valvesInError[7])
 		errorLevel = 1;
 	if (valvesInError[6])
@@ -571,57 +523,28 @@ int isError(int valvesInError[], int errorLevel) {
 	int i = 0;
 	for (i = 0; i < 6; ++i) {
 		ledOn(errorLevel);
-		sleep(1);
+		HAL_Delay(1000);
 		ledOff();
-		sleep(1);
+		HAL_Delay(1000);
 	}
 
 	for (i = 0; i < 9; ++i) {
 		if (valvesInError[i] == 1) {
 			ledOn(i);
-			sleep(1);
+			HAL_Delay(1000);
 			ledOff();
 		}
 	}
-	LedOn(errorLevel);
+	ledOn(errorLevel);
 	return 0;
 }
 
-/*
- int bigError(int valvesInError[])
- {
- int turnOn;
- //turn on buzzer
- //turn on LEDs for error level
- //Flash for 5 seconds, .75s on, .25s off
-
- //Go through which valves are in error, hold LED on for 1s
- for(i=0; i<9; ++i)
- {
- if(valvesInError[i] = 1;)
- {
-
- }
- int someError(int valvesInError[])
- {
- }
- int smallError(int valvesInError[])
- {
-
- }
- */
-
 void buzzOn() {
-	//printf for debugging outside of board
-	//will comment out in board testing
-	printf("Buzzer ON\n");
+	HAL_GPIO_WritePin(GPIOB, Buzzer_Pin, GPIO_PIN_SET);
 }
 
 void buzzOff() {
-	//printf for debugging outside of board
-	//will comment out in board testing
-	printf("Buzzer OFF\n");
-
+	HAL_GPIO_WritePin(GPIOB, Buzzer_Pin, GPIO_PIN_RESET);
 }
 
 void ledOn(int whichOn) {
@@ -635,37 +558,37 @@ void ledOn(int whichOn) {
 	//will comment out in board testing
 	printf("LED %d ON\n", whichOn);
 	if (whichOn == 7) {
-		//turn on LED3
-		//turn on LED2
-		//turn on LED1
+		HAL_GPIO_WritePin(GPIOB, LED_Three_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOB, LED_Two_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOB, LED_One_Pin, GPIO_PIN_SET);
 	}
 	if (whichOn == 6) {
-		//turn on LED3
-		//turn on LED2
+		HAL_GPIO_WritePin(GPIOB, LED_Three_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOB, LED_Two_Pin, GPIO_PIN_SET);
 	}
 	if (whichOn == 5) {
-		//turn on LED3
-		//turn on LED1
+		HAL_GPIO_WritePin(GPIOB, LED_Three_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOB, LED_One_Pin, GPIO_PIN_SET);
 	}
 	if (whichOn == 4) {
-		//turn on LED3
+		HAL_GPIO_WritePin(GPIOB, LED_Three_Pin, GPIO_PIN_SET);
 	}
 	if (whichOn == 3) {
-		//turn on LED2
-		//turn on LED1
+		HAL_GPIO_WritePin(GPIOB, LED_Two_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOB, LED_One_Pin, GPIO_PIN_SET);
 	}
 	if (whichOn == 2) {
-		//turn on LED2
+		HAL_GPIO_WritePin(GPIOB, LED_Two_Pin, GPIO_PIN_SET);
 	}
 	if (whichOn == 1) {
-		//turn on LED1
+		HAL_GPIO_WritePin(GPIOB, LED_One_Pin, GPIO_PIN_SET);
 	}
 }
 
 void ledOff() {
-	//printf for debugging outside of board
-	//will comment out in board testing
-	printf("LEDs OFF\n");
+	HAL_GPIO_WritePin(GPIOB, LED_One_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOB, LED_Two_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOB, LED_Three_Pin, GPIO_PIN_RESET);
 
 }
 
@@ -673,15 +596,15 @@ void ledOff() {
 void powerFailureState() {
 	while (1) {
 		ledOn(2);
-		sleep(1);
+		HAL_Delay(1000);
 		ledOff();
 
 		ledOn(1);
-		sleep(1);
+		HAL_Delay(1000);
 		ledOff();
 
 		ledOn(0);
-		sleep(1);
+		HAL_Delay(1000);
 		ledOff();
 	}
 }
