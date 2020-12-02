@@ -406,7 +406,7 @@ int main(void) {
  800032c:	18ba      	adds	r2, r7, r2
  800032e:	6013      	str	r3, [r2, #0]
 
-		for (int i = 0; i<9; i++)
+		for (int i = 0; i <= 9; i++)
  8000330:	2300      	movs	r3, #0
  8000332:	4a25      	ldr	r2, [pc, #148]	; (80003c8 <main+0x1a8>)
  8000334:	18ba      	adds	r2, r7, r2
@@ -432,7 +432,7 @@ int main(void) {
  8000358:	18d3      	adds	r3, r2, r3
  800035a:	1c0a      	adds	r2, r1, #0
  800035c:	701a      	strb	r2, [r3, #0]
-		for (int i = 0; i<9; i++)
+		for (int i = 0; i <= 9; i++)
  800035e:	183b      	adds	r3, r7, r0
  8000360:	681b      	ldr	r3, [r3, #0]
  8000362:	3301      	adds	r3, #1
@@ -441,7 +441,7 @@ int main(void) {
  8000368:	4b17      	ldr	r3, [pc, #92]	; (80003c8 <main+0x1a8>)
  800036a:	18fb      	adds	r3, r7, r3
  800036c:	681b      	ldr	r3, [r3, #0]
- 800036e:	2b08      	cmp	r3, #8
+ 800036e:	2b09      	cmp	r3, #9
  8000370:	dde3      	ble.n	800033a <main+0x11a>
 		}
 

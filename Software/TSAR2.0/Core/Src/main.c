@@ -183,7 +183,7 @@ int main(void) {
 
 		errorStatus = mainCheck(sensorState, safetyState, 0);
 
-		for (int i = 0; i<9; i++)
+		for (int i = 0; i <= 9; i++)
 		{
 			writeBuffer[i] = (char)(sensorState[i] + 48);
 		}
