@@ -26,6 +26,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdlib.h>
 //#include <stdarg.h> //for va_list var arg functions
 /* USER CODE END Includes */
 
@@ -98,6 +99,12 @@ void powerFailureState();
 
 // End Katie's PFP
 
+// Begin Tiffani's PFP
+
+size_t SizeOfFile(char const *path);
+
+void WriteFile(char const* fileName, char* buffer, size_t size);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -118,7 +125,7 @@ int main(void) {
 
 	int errorStatus;
 
-	char writeBuffer[10];
+	char writeBuffer[11];
 
 	unsigned int bytesWritten;
 
@@ -132,6 +139,8 @@ int main(void) {
 	/* USER CODE BEGIN Init */
 
 	int safetyState[] = {0, 0, 1, 1, 1, 1, 1, 1, 1};
+
+	char *file = "valveStateData.txt";
 
 	/* USER CODE END Init */
 
@@ -181,6 +190,8 @@ int main(void) {
 
 		sensorState[8] = HAL_GPIO_ReadPin(GPIOA, Hall_Effect_Sensor_Nine_Pin);
 
+		sensorState[9] = 0;
+
 		errorStatus = mainCheck(sensorState, safetyState, 0);
 
 		for (int i = 0; i <= 9; i++)
@@ -191,7 +202,9 @@ int main(void) {
 		//Open the file system
 		f_mount(&FatFs, "", 1); // 1=mount now
 
+		WriteFile(file, writeBuffer, sizeof(writeBuffer));
 
+		/*
 		//Now let's try and write a file "write.txt"
 		f_open(&fil, "valveStateData.txt",
 				FA_WRITE | FA_OPEN_ALWAYS | FA_CREATE_ALWAYS);
@@ -202,7 +215,10 @@ int main(void) {
 		f_close(&fil);
 
 		//We're done, so de-mount the drive
+		*/
 		f_mount(NULL, "", 0);
+
+
 		// End Tiffani's main program
 
 		/* USER CODE END WHILE */
@@ -385,15 +401,8 @@ int mainCheck(int valveCState[], int valveExState[], int batteryState)
 	int errorState = 0;
 
 	//array keeps track of which valves are in error
-	int valvesInError[10]; //0 = good, 1 = error
+	int valvesInError[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; //0 = good, 1 = error
 
-	//initializing error array
-	//10th index is for power
-	int i = 0;
-	for (i=0; i<9; ++i)
-	{
-		valvesInError[i] = 0;
-	}
 	valvesInError[9] = batteryState;
 
 	errorButton = checkState(valveCState, valveExState, valvesInError);
@@ -601,6 +610,57 @@ void powerFailureState() {
 }
 
 // End Katie's PF's
+
+// Begin Tiffani's PF's
+
+size_t SizeOfFile(char const *path)
+{
+    FILE *fp = fopen(path, "r");
+    fseek(fp, 0, SEEK_END);
+    size_t fsize = (size_t) ftell(fp);
+    fclose(fp);
+    return fsize;
+}
+
+void WriteFile(char const* fileName, char* buffer, size_t size)
+{
+
+    //size_t alignment = (size + 32 - 1) & ~ (32 - 1);  // We must align by 32
+    char* Buffer_logger;
+    //memset(Buffer_logger, 0, alignment);
+    memcpy(Buffer_logger, buffer, size);
+
+    unsigned int BytesWr;
+    int result;
+    FIL file; 		//File handle
+    size_t accum = 0;
+    result = f_open(&file, fileName, FA_CREATE_ALWAYS | FA_WRITE | FA_CREATE_ALWAYS);
+
+    sprintf(Buffer_logger, "%s", buffer);
+
+    while (SizeOfFile(fileName) == 0)
+    {
+        // Open log for writing
+        result = f_open(&file, fileName, FA_WRITE);
+
+        // Point to the EOF
+        result = f_lseek(&file, accum);
+
+        // Write to log
+        result = f_write(&file, (const void*) Buffer_logger, size, &BytesWr);
+
+        accum += accum + strlen(Buffer_logger);
+
+        //Close file.
+        result = f_close(&file);
+
+        //memset(Buffer_logger, 0, alignment);
+
+        //size = 32;
+        memset(Buffer_logger, 0, size);
+    }
+    free(Buffer_logger);
+}
 
 /* USER CODE END 4 */
 
