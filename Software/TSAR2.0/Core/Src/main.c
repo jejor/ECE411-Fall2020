@@ -48,6 +48,8 @@ SPI_HandleTypeDef hspi1;
 
 /* USER CODE BEGIN PV */
 
+size_t accum = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -566,7 +568,6 @@ void WriteFile(char const* fileName, char* buffer, size_t size)
 
     unsigned int BytesWr;
     FIL file; 		//File handle
-    size_t accum = 0;
     f_open(&file, fileName, FA_CREATE_ALWAYS | FA_WRITE | FA_CREATE_ALWAYS);
 
     sprintf(Buffer_logger, "%s", buffer);
