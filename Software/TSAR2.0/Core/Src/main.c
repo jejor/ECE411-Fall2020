@@ -570,8 +570,6 @@ void WriteFile(char const* fileName, char* buffer, size_t size)
     FIL file; 		//File handle
     f_open(&file, fileName, FA_CREATE_ALWAYS | FA_WRITE | FA_CREATE_ALWAYS);
 
-    sprintf(Buffer_logger, "%s", buffer);
-
     while (SizeOfFile(fileName) == 0)
     {
         // Open log for writing
