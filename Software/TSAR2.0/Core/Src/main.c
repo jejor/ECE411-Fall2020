@@ -119,11 +119,7 @@ int main(void)
 
 	int sensorState[10];
 
-	int errorStatus;
-
 	char writeBuffer[11];
-
-	unsigned int bytesWritten;
 
   /* USER CODE END 1 */
 
@@ -158,7 +154,6 @@ int main(void)
 
 	//some variables for FatFs
 	FATFS FatFs; 	//Fatfs handle
-	FIL fil; 		//File handle
 
 	//Open the file system
 	f_mount(&FatFs, "", 1); // 1=mount now
@@ -190,7 +185,7 @@ int main(void)
 
 		sensorState[9] = 0;
 
-		errorStatus = mainCheck(sensorState, safetyState, 0);
+		mainCheck(sensorState, safetyState, 0);
 
 		for (int i = 0; i <= 9; i++)
 		{
@@ -570,28 +565,27 @@ void WriteFile(char const* fileName, char* buffer, size_t size)
     memcpy(Buffer_logger, buffer, size);
 
     unsigned int BytesWr;
-    int result;
     FIL file; 		//File handle
     size_t accum = 0;
-    result = f_open(&file, fileName, FA_CREATE_ALWAYS | FA_WRITE | FA_CREATE_ALWAYS);
+    f_open(&file, fileName, FA_CREATE_ALWAYS | FA_WRITE | FA_CREATE_ALWAYS);
 
     sprintf(Buffer_logger, "%s", buffer);
 
     while (SizeOfFile(fileName) == 0)
     {
         // Open log for writing
-        result = f_open(&file, fileName, FA_WRITE);
+        f_open(&file, fileName, FA_WRITE);
 
         // Point to the EOF
-        result = f_lseek(&file, accum);
+        f_lseek(&file, accum);
 
         // Write to log
-        result = f_write(&file, (const void*) Buffer_logger, size, &BytesWr);
+        f_write(&file, (const void*) Buffer_logger, size, &BytesWr);
 
         accum += accum + strlen(Buffer_logger);
 
         //Close file.
-        result = f_close(&file);
+        f_close(&file);
     }
 }
 
