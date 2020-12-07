@@ -14905,11 +14905,11 @@ For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text
 <instance part="GND16" gate="1" x="96.52" y="203.2" smashed="yes">
 <attribute name="VALUE" x="93.98" y="200.66" size="1.778" layer="96"/>
 </instance>
-<instance part="D1" gate="G$0" x="254" y="198.12" smashed="yes" rot="R270">
-<attribute name="NAME" x="251.46" y="203.2" size="2.54" layer="95" rot="R270" align="top-left"/>
-<attribute name="DIS" x="254" y="198.12" size="1.778" layer="96" rot="R270" display="off"/>
-<attribute name="DPN" x="254" y="198.12" size="1.778" layer="96" rot="R270" display="off"/>
-<attribute name="MFR" x="254" y="198.12" size="1.778" layer="96" rot="R270" display="off"/>
+<instance part="D1" gate="G$0" x="236.22" y="187.96" smashed="yes" rot="R90">
+<attribute name="NAME" x="238.76" y="182.88" size="2.54" layer="95" rot="R90" align="top-left"/>
+<attribute name="DIS" x="236.22" y="187.96" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="DPN" x="236.22" y="187.96" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MFR" x="236.22" y="187.96" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="GND17" gate="1" x="246.38" y="177.8" smashed="yes">
 <attribute name="VALUE" x="243.84" y="175.26" size="1.778" layer="96"/>
@@ -14940,11 +14940,11 @@ For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text
 <instance part="GND22" gate="1" x="121.92" y="99.06" smashed="yes">
 <attribute name="VALUE" x="119.38" y="96.52" size="1.778" layer="96"/>
 </instance>
-<instance part="D2" gate="G$0" x="254" y="99.06" smashed="yes" rot="R270">
-<attribute name="NAME" x="251.46" y="104.14" size="2.54" layer="95" rot="R270" align="top-left"/>
-<attribute name="MFR" x="254" y="99.06" size="1.778" layer="96" rot="R270" display="off"/>
-<attribute name="DPN" x="254" y="99.06" size="1.778" layer="96" rot="R270" display="off"/>
-<attribute name="DIS" x="254" y="99.06" size="1.778" layer="96" rot="R270" display="off"/>
+<instance part="D2" gate="G$0" x="236.22" y="88.9" smashed="yes" rot="R90">
+<attribute name="NAME" x="238.76" y="83.82" size="2.54" layer="95" rot="R90" align="top-left"/>
+<attribute name="MFR" x="236.22" y="88.9" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="DPN" x="236.22" y="88.9" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="DIS" x="236.22" y="88.9" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="GND24" gate="1" x="246.38" y="78.74" smashed="yes">
 <attribute name="VALUE" x="243.84" y="76.2" size="1.778" layer="96"/>
@@ -15134,11 +15134,6 @@ For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text
 <wire x1="228.6" y1="190.5" x2="228.6" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="D1" gate="G$0" pin="K"/>
-<pinref part="GND17" gate="1" pin="GND"/>
-<wire x1="246.38" y1="182.88" x2="246.38" y2="180.34" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GND13" gate="1" pin="GND"/>
 <wire x1="266.7" y1="190.5" x2="266.7" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="C3_L" gate="G$1" pin="2"/>
@@ -15172,11 +15167,6 @@ For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text
 <pinref part="R2_H" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="D2" gate="G$0" pin="K"/>
-<pinref part="GND24" gate="1" pin="GND"/>
-<wire x1="246.38" y1="83.82" x2="246.38" y2="81.28" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GND20" gate="1" pin="GND"/>
 <wire x1="266.7" y1="91.44" x2="266.7" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="C3_H" gate="G$1" pin="2"/>
@@ -15201,6 +15191,18 @@ For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text
 <pinref part="GND43" gate="1" pin="GND"/>
 <wire x1="15.24" y1="172.72" x2="15.24" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="BATT" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="D1" gate="G$0" pin="A"/>
+<pinref part="GND17" gate="1" pin="GND"/>
+<wire x1="243.84" y1="182.88" x2="246.38" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="182.88" x2="246.38" y2="180.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="D2" gate="G$0" pin="A"/>
+<pinref part="GND24" gate="1" pin="GND"/>
+<wire x1="243.84" y1="83.82" x2="246.38" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="83.82" x2="246.38" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -15240,16 +15242,6 @@ For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text
 <pinref part="R2_L" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="D1" gate="G$0" pin="A"/>
-<pinref part="L1" gate="G$1" pin="1"/>
-<wire x1="248.92" y1="203.2" x2="246.38" y2="203.2" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$0" pin="SWITCH_EMITTER"/>
-<wire x1="223.52" y1="203.2" x2="246.38" y2="203.2" width="0.1524" layer="91"/>
-<junction x="246.38" y="203.2"/>
-</segment>
-</net>
 <net name="N$18" class="0">
 <segment>
 <wire x1="137.16" y1="124.46" x2="144.78" y2="124.46" width="0.1524" layer="91"/>
@@ -15285,16 +15277,6 @@ For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text
 <junction x="248.92" y="114.3"/>
 <pinref part="R2_H" gate="G$1" pin="2"/>
 <pinref part="R1_H" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$21" class="0">
-<segment>
-<pinref part="D2" gate="G$0" pin="A"/>
-<pinref part="L2" gate="G$1" pin="1"/>
-<wire x1="248.92" y1="104.14" x2="246.38" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$0" pin="SWITCH_EMITTER"/>
-<wire x1="223.52" y1="104.14" x2="246.38" y2="104.14" width="0.1524" layer="91"/>
-<junction x="246.38" y="104.14"/>
 </segment>
 </net>
 <net name="POE" class="0">
@@ -15381,6 +15363,26 @@ For protoboard we used a long piece of wire at .3 ohms and it worked fine.</text
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
 <pinref part="TP3V3" gate="G$1" pin="1"/>
 <junction x="294.64" y="203.2"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U1" gate="G$0" pin="SWITCH_EMITTER"/>
+<pinref part="D1" gate="G$0" pin="K"/>
+<wire x1="223.52" y1="203.2" x2="243.84" y2="203.2" width="0.1524" layer="91"/>
+<pinref part="L1" gate="G$1" pin="1"/>
+<wire x1="243.84" y1="203.2" x2="248.92" y2="203.2" width="0.1524" layer="91"/>
+<junction x="243.84" y="203.2"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="U2" gate="G$0" pin="SWITCH_EMITTER"/>
+<pinref part="D2" gate="G$0" pin="K"/>
+<wire x1="223.52" y1="104.14" x2="243.84" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="L2" gate="G$1" pin="1"/>
+<wire x1="243.84" y1="104.14" x2="248.92" y2="104.14" width="0.1524" layer="91"/>
+<junction x="243.84" y="104.14"/>
 </segment>
 </net>
 </nets>
